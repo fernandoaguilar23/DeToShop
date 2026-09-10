@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" fill="none">
+  <!-- Concrete tone background -->
+  <rect width="800" height="1000" fill="#0E0E10"/>
+  <defs>
+    <radialGradient id="lightGlow2" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#303035" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#09090A" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="concreteGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3F3F46"/>
+      <stop offset="50%" stop-color="#27272A"/>
+      <stop offset="100%" stop-color="#1E1E22"/>
+    </linearGradient>
+    <filter id="shadow2" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="25" stdDeviation="30" flood-color="#000000" flood-opacity="0.85"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="1000" fill="url(#lightGlow2)"/>
+
+  <!-- Editorial marks -->
+  <line x1="60" y1="60" x2="120" y2="60" stroke="#44444C" stroke-width="1.5"/>
+  <line x1="60" y1="60" x2="60" y2="120" stroke="#44444C" stroke-width="1.5"/>
+  <line x1="740" y1="60" x2="680" y2="60" stroke="#44444C" stroke-width="1.5"/>
+  <line x1="740" y1="60" x2="740" y2="120" stroke="#44444C" stroke-width="1.5"/>
+  
+  <text x="60" y="930" font-family="'Space Grotesk', monospace" font-size="14" fill="#888890" letter-spacing="3">DE TO’ SHOP // URBAN CONCRETE</text>
+  <text x="740" y="930" font-family="'Space Grotesk', monospace" font-size="14" fill="#888890" letter-spacing="3" text-anchor="end">COLOR: RAW GREY</text>
+
+  <!-- Oversize Shirt Silhouette -->
+  <g filter="url(#shadow2)">
+    <path d="M 280 200 
+             C 330 225, 470 225, 520 200 
+             L 690 310 
+             L 630 460 
+             L 545 425 
+             L 545 780 
+             C 545 790, 535 795, 520 795 
+             L 280 795 
+             C 265 795, 255 790, 255 780 
+             L 255 425 
+             L 170 460 
+             L 110 310 
+             Z" 
+          fill="url(#concreteGrad)" 
+          stroke="#52525B" 
+          stroke-width="2"/>
+
+    <!-- Ribbed Collar -->
+    <path d="M 330 208 C 365 240, 435 240, 470 208 C 455 220, 345 220, 330 208 Z" 
+          fill="#27272A" 
+          stroke="#71717A" 
+          stroke-width="1.5"/>
+
+    <path d="M 280 200 L 255 425" stroke="#3F3F46" stroke-width="1.5"/>
+    <path d="M 520 200 L 545 425" stroke="#3F3F46" stroke-width="1.5"/>
+    <line x1="255" y1="770" x2="545" y2="770" stroke="#3F3F46" stroke-width="1.5"/>
+
+    <!-- Minimalist Typography Brand Print -->
+    <text x="400" y="470" font-family="'Space Grotesk', sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="8">DE TO’ SHOP</text>
+    <text x="400" y="492" font-family="'Space Grotesk', sans-serif" font-size="10" font-weight="400" fill="#A1A1AA" text-anchor="middle" letter-spacing="4">ESSENTIAL FORM</text>
+  </g>
+
+  <!-- Tag overlay badge -->
+  <rect x="330" y="840" width="140" height="32" rx="4" fill="#1F1F24" stroke="#52525B" stroke-width="1"/>
+  <text x="400" y="861" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="600" fill="#E4E4E7" text-anchor="middle" letter-spacing="2">CONCRETE EDITION</text>
+</svg>

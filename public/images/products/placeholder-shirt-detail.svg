@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" fill="none">
+  <rect width="800" height="1000" fill="#0C0C0E"/>
+  <defs>
+    <radialGradient id="detailGlow" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#222228" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#09090B" stop-opacity="1"/>
+    </radialGradient>
+    <pattern id="knitPattern" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M 0 8 Q 4 4 8 8 T 16 8" stroke="#1A1A20" stroke-width="1.2" fill="none"/>
+      <path d="M 0 16 Q 4 12 8 16 T 16 16" stroke="#18181E" stroke-width="1.2" fill="none"/>
+    </pattern>
+    <filter id="detailShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="20" stdDeviation="25" flood-color="#000000" flood-opacity="0.8"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="1000" fill="url(#detailGlow)"/>
+  <rect width="800" height="1000" fill="url(#knitPattern)" opacity="0.75"/>
+
+  <!-- Editorial Layout Frame -->
+  <line x1="60" y1="60" x2="120" y2="60" stroke="#33333C" stroke-width="1.5"/>
+  <line x1="60" y1="60" x2="60" y2="120" stroke="#33333C" stroke-width="1.5"/>
+  <line x1="740" y1="60" x2="680" y2="60" stroke="#33333C" stroke-width="1.5"/>
+  <line x1="740" y1="60" x2="740" y2="120" stroke="#33333C" stroke-width="1.5"/>
+
+  <text x="60" y="930" font-family="'Space Grotesk', monospace" font-size="14" fill="#6A6A78" letter-spacing="3">DE TO’ SHOP // MACRO TEXTURE & SEAM</text>
+  <text x="740" y="930" font-family="'Space Grotesk', monospace" font-size="14" fill="#6A6A78" letter-spacing="3" text-anchor="end">PIMA PERUANA: 175 GSM</text>
+
+  <!-- Macro Collar & Label Close Up -->
+  <g filter="url(#detailShadow)">
+    <!-- Ribbed collar curve -->
+    <path d="M 100 280 C 350 480, 550 420, 750 240 L 780 180 C 530 360, 320 400, 80 200 Z" 
+          fill="#16161A" 
+          stroke="#444452" 
+          stroke-width="2"/>
+    
+    <!-- Ribbed texture lines on collar -->
+    <path d="M 180 280 L 195 320" stroke="#2D2D36" stroke-width="2"/>
+    <path d="M 230 310 L 245 355" stroke="#2D2D36" stroke-width="2"/>
+    <path d="M 280 340 L 295 385" stroke="#2D2D36" stroke-width="2"/>
+    <path d="M 330 365 L 345 410" stroke="#2D2D36" stroke-width="2"/>
+    <path d="M 380 380 L 395 425" stroke="#2D2D36" stroke-width="2"/>
+    <path d="M 430 380 L 440 425" stroke="#2D2D36" stroke-width="2"/>
+    <path d="M 480 375 L 485 418" stroke="#2D2D36" stroke-width="2"/>
+    <path d="M 530 360 L 530 405" stroke="#2D2D36" stroke-width="2"/>
+    <path d="M 580 335 L 575 380" stroke="#2D2D36" stroke-width="2"/>
+    <path d="M 630 305 L 620 350" stroke="#2D2D36" stroke-width="2"/>
+
+    <!-- Double stitched hem line -->
+    <path d="M 120 460 C 350 560, 500 520, 720 380" stroke="#3D3D4A" stroke-width="2" stroke-dasharray="8 6"/>
+    <path d="M 125 472 C 355 572, 505 532, 725 392" stroke="#3D3D4A" stroke-width="2" stroke-dasharray="8 6"/>
+
+    <!-- High-end Woven neck label -->
+    <g transform="translate(260, 520)">
+      <rect x="0" y="0" width="280" height="150" rx="4" fill="#111114" stroke="#484856" stroke-width="1.5"/>
+      <text x="140" y="45" font-family="'Syncopate', sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="4">DE TO’ SHOP</text>
+      <text x="140" y="75" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="500" fill="#A1A1AA" text-anchor="middle" letter-spacing="3">PIMA PERUANA</text>
+      <line x1="50" y1="92" x2="230" y2="92" stroke="#33333E" stroke-width="1"/>
+      <text x="140" y="115" font-family="'Space Grotesk', monospace" font-size="14" font-weight="700" fill="#E4E4E7" text-anchor="middle" letter-spacing="6">175 GSM</text>
+      <text x="140" y="135" font-family="'Space Grotesk', sans-serif" font-size="9" fill="#71717A" text-anchor="middle" letter-spacing="2">MADE FOR PRESENCE</text>
+    </g>
+  </g>
+
+  <rect x="290" y="850" width="220" height="34" rx="4" fill="#141418" stroke="#383842" stroke-width="1"/>
+  <text x="400" y="872" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="600" fill="#E4E4E7" text-anchor="middle" letter-spacing="2">COSTURAS DE ALTA DENSIDAD</text>
+</svg>

@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" fill="none">
+  <rect width="800" height="1000" fill="#09090B"/>
+  <defs>
+    <radialGradient id="packGlow" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#232328" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#070709" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="pouchGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E1E22"/>
+      <stop offset="40%" stop-color="#131316"/>
+      <stop offset="100%" stop-color="#0E0E10"/>
+    </linearGradient>
+    <filter id="packShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="25" stdDeviation="35" flood-color="#000000" flood-opacity="0.95"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="1000" fill="url(#packGlow)"/>
+
+  <!-- Editorial Layout Frame -->
+  <line x1="60" y1="60" x2="120" y2="60" stroke="#33333C" stroke-width="1.5"/>
+  <line x1="60" y1="60" x2="60" y2="120" stroke="#33333C" stroke-width="1.5"/>
+  <line x1="740" y1="60" x2="680" y2="60" stroke="#33333C" stroke-width="1.5"/>
+  <line x1="740" y1="60" x2="740" y2="120" stroke="#33333C" stroke-width="1.5"/>
+
+  <text x="60" y="930" font-family="'Space Grotesk', monospace" font-size="14" fill="#6A6A78" letter-spacing="3">DE TO’ SHOP // OFFICIAL PACKAGING</text>
+  <text x="740" y="930" font-family="'Space Grotesk', monospace" font-size="14" fill="#6A6A78" letter-spacing="3" text-anchor="end">READY TO DISPATCH</text>
+
+  <!-- Luxury Frosted / Matte Zipper Pouch -->
+  <g filter="url(#packShadow)">
+    <rect x="180" y="160" width="440" height="660" rx="16" fill="url(#pouchGrad)" stroke="#383842" stroke-width="2"/>
+    
+    <!-- Zipper lock line -->
+    <line x1="180" y1="230" x2="620" y2="230" stroke="#2D2D35" stroke-width="3"/>
+    <line x1="180" y1="238" x2="620" y2="238" stroke="#1A1A1E" stroke-width="2"/>
+    
+    <!-- Air hole vent -->
+    <circle cx="560" cy="200" r="8" fill="#0A0A0D" stroke="#33333B" stroke-width="1.5"/>
+
+    <!-- Branded Seal Sticker -->
+    <rect x="250" y="380" width="300" height="180" rx="8" fill="#141418" stroke="#454552" stroke-width="1.5"/>
+    
+    <text x="400" y="430" font-family="'Syncopate', sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="6">DE TO’ SHOP</text>
+    <text x="400" y="460" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="500" fill="#A1A1AA" text-anchor="middle" letter-spacing="4">OFFICIAL STREETWEAR ARCHIVE</text>
+    <line x1="300" y1="480" x2="500" y2="480" stroke="#3F3F4C" stroke-width="1"/>
+    <text x="400" y="505" font-family="'Space Grotesk', monospace" font-size="10" fill="#71717A" text-anchor="middle" letter-spacing="2">AUTHENTIC GARMENT · SEALED</text>
+    <text x="400" y="525" font-family="'Space Grotesk', sans-serif" font-size="9" fill="#C5A880" text-anchor="middle" letter-spacing="3">VERIFIED QUALITY</text>
+
+    <!-- Barcode simulation at bottom -->
+    <g transform="translate(250, 680)">
+      <line x1="0" y1="0" x2="0" y2="40" stroke="#888895" stroke-width="2"/>
+      <line x1="6" y1="0" x2="6" y2="40" stroke="#888895" stroke-width="4"/>
+      <line x1="16" y1="0" x2="16" y2="40" stroke="#888895" stroke-width="1.5"/>
+      <line x1="24" y1="0" x2="24" y2="40" stroke="#888895" stroke-width="3"/>
+      <line x1="34" y1="0" x2="34" y2="40" stroke="#888895" stroke-width="5"/>
+      <line x1="48" y1="0" x2="48" y2="40" stroke="#888895" stroke-width="2"/>
+      <line x1="58" y1="0" x2="58" y2="40" stroke="#888895" stroke-width="3.5"/>
+      <line x1="72" y1="0" x2="72" y2="40" stroke="#888895" stroke-width="1.5"/>
+      <line x1="84" y1="0" x2="84" y2="40" stroke="#888895" stroke-width="4"/>
+      <line x1="96" y1="0" x2="96" y2="40" stroke="#888895" stroke-width="2"/>
+      <line x1="110" y1="0" x2="110" y2="40" stroke="#888895" stroke-width="5"/>
+      <line x1="126" y1="0" x2="126" y2="40" stroke="#888895" stroke-width="2.5"/>
+      <line x1="140" y1="0" x2="140" y2="40" stroke="#888895" stroke-width="4"/>
+      <line x1="154" y1="0" x2="154" y2="40" stroke="#888895" stroke-width="1.5"/>
+      <line x1="168" y1="0" x2="168" y2="40" stroke="#888895" stroke-width="3"/>
+      <line x1="184" y1="0" x2="184" y2="40" stroke="#888895" stroke-width="5"/>
+      <line x1="200" y1="0" x2="200" y2="40" stroke="#888895" stroke-width="2"/>
+      <line x1="214" y1="0" x2="214" y2="40" stroke="#888895" stroke-width="4"/>
+      <line x1="230" y1="0" x2="230" y2="40" stroke="#888895" stroke-width="2"/>
+      <line x1="245" y1="0" x2="245" y2="40" stroke="#888895" stroke-width="3"/>
+      <line x1="260" y1="0" x2="260" y2="40" stroke="#888895" stroke-width="1.5"/>
+      <line x1="275" y1="0" x2="275" y2="40" stroke="#888895" stroke-width="4"/>
+      <line x1="290" y1="0" x2="290" y2="40" stroke="#888895" stroke-width="2"/>
+      <text x="150" y="55" font-family="'Space Grotesk', monospace" font-size="10" fill="#71717A" text-anchor="middle" letter-spacing="3">#DTS-8942-COL</text>
+    </g>
+  </g>
+
+  <rect x="310" y="860" width="180" height="34" rx="4" fill="#141418" stroke="#383842" stroke-width="1"/>
+  <text x="400" y="882" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="600" fill="#E4E4E7" text-anchor="middle" letter-spacing="2">EMPAQUE PROTEGIDO</text>
+</svg>

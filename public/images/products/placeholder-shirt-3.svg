@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" fill="none">
+  <rect width="800" height="1000" fill="#0A0A0C"/>
+  <defs>
+    <radialGradient id="lightGlow3" cx="50%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#222228" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#080809" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="marbleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#24242A"/>
+      <stop offset="25%" stop-color="#18181D"/>
+      <stop offset="50%" stop-color="#2C2C34"/>
+      <stop offset="75%" stop-color="#151518"/>
+      <stop offset="100%" stop-color="#202026"/>
+    </linearGradient>
+    <filter id="shadow3" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="25" stdDeviation="30" flood-color="#000000" flood-opacity="0.85"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="1000" fill="url(#lightGlow3)"/>
+
+  <!-- Editorial layout marks -->
+  <line x1="60" y1="60" x2="120" y2="60" stroke="#333338" stroke-width="1.5"/>
+  <line x1="60" y1="60" x2="60" y2="120" stroke="#333338" stroke-width="1.5"/>
+  <line x1="740" y1="60" x2="680" y2="60" stroke="#333338" stroke-width="1.5"/>
+  <line x1="740" y1="60" x2="740" y2="120" stroke="#333338" stroke-width="1.5"/>
+  
+  <text x="60" y="930" font-family="'Space Grotesk', monospace" font-size="14" fill="#666670" letter-spacing="3">DE TO’ SHOP // ACID MARBLE</text>
+  <text x="740" y="930" font-family="'Space Grotesk', monospace" font-size="14" fill="#666670" letter-spacing="3" text-anchor="end">WASH: ARTISANAL</text>
+
+  <!-- Shirt Silhouette with marble veining -->
+  <g filter="url(#shadow3)">
+    <path d="M 280 200 
+             C 330 225, 470 225, 520 200 
+             L 690 310 
+             L 630 460 
+             L 545 425 
+             L 545 780 
+             C 545 790, 535 795, 520 795 
+             L 280 795 
+             C 265 795, 255 790, 255 780 
+             L 255 425 
+             L 170 460 
+             L 110 310 
+             Z" 
+          fill="url(#marbleGrad)" 
+          stroke="#454550" 
+          stroke-width="2"/>
+
+    <!-- Subtle marble veins across garment -->
+    <path d="M 290 320 Q 380 340 430 290 T 520 380" stroke="#3A3A46" stroke-width="2.5" fill="none" opacity="0.4"/>
+    <path d="M 230 450 Q 320 480 360 550 T 480 620" stroke="#353540" stroke-width="2" fill="none" opacity="0.5"/>
+    <path d="M 400 580 Q 480 640 510 750" stroke="#3A3A46" stroke-width="2" fill="none" opacity="0.3"/>
+
+    <!-- Ribbed Collar -->
+    <path d="M 330 208 C 365 240, 435 240, 470 208 C 455 220, 345 220, 330 208 Z" 
+          fill="#1C1C22" 
+          stroke="#4B4B58" 
+          stroke-width="1.5"/>
+
+    <!-- Minimalist Typography Brand Print -->
+    <text x="400" y="470" font-family="'Space Grotesk', sans-serif" font-size="18" font-weight="700" fill="#EAEAEA" text-anchor="middle" letter-spacing="8">TO’ SHOP</text>
+    <text x="400" y="492" font-family="'Space Grotesk', sans-serif" font-size="10" font-weight="400" fill="#8E8E9A" text-anchor="middle" letter-spacing="4">MINERAL TEXTURE</text>
+  </g>
+
+  <!-- Tag overlay badge -->
+  <rect x="330" y="840" width="140" height="32" rx="4" fill="#17171C" stroke="#383842" stroke-width="1"/>
+  <text x="400" y="861" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="600" fill="#D4D4D8" text-anchor="middle" letter-spacing="2">BLACK MARBLE</text>
+</svg>

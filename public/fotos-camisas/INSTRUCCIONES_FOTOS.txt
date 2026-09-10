@@ -1,0 +1,18 @@
+DE TO' SHOP — CARPETA PARA FOTOGRAFÍAS REALES
+==================================================
+
+¡Hola! Esta carpeta fue creada para recibir las fotografías reales de las T-Shirts disponibles.
+
+📍 RUTA EN TU COMPUTADOR:
+C:\Users\devma\OneDrive\Documentos\Detoshop\public\fotos-camisas\
+
+📸 RECOMENDACIONES DE FOTOGRAFÍA:
+1. Formatos recomendados: .jpg, .jpeg, .png, .webp
+2. Si tienes fotos de la prenda extendida y también en su empaque oficial, puedes incluir ambas.
+3. Nombres sugeridos (para identificarlas fácilmente):
+   - camisa-1.jpg / camisa-1-empaque.jpg
+   - camisa-2.jpg / camisa-2-empaque.jpg
+   - o con el nombre del modelo: negra-essential.jpg, gris-concrete.jpg, etc.
+
+Una vez pegues o subas las fotos aquí:
+Avísame con el nombre de cada foto, su nombre oficial de prenda y las tallas disponibles (ej: S, M, L, XL) para conectarlas de inmediato al catálogo y dejarlas visibles en la web.

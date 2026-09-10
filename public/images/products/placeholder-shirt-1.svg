@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" fill="none">
+  <!-- Background with dark marble / concrete gradient -->
+  <rect width="800" height="1000" fill="#0C0C0E"/>
+  <defs>
+    <radialGradient id="lightGlow" cx="50%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#242429" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#121215" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#08080A" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="shirtGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18181B"/>
+      <stop offset="50%" stop-color="#121214"/>
+      <stop offset="100%" stop-color="#0A0A0C"/>
+    </linearGradient>
+    <linearGradient id="metalRim" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3A3A40"/>
+      <stop offset="50%" stop-color="#555560"/>
+      <stop offset="100%" stop-color="#2A2A30"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="25" stdDeviation="30" flood-color="#000000" flood-opacity="0.85"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="1000" fill="url(#lightGlow)"/>
+
+  <!-- Subtle grid / editorial marks -->
+  <line x1="60" y1="60" x2="120" y2="60" stroke="#333338" stroke-width="1.5"/>
+  <line x1="60" y1="60" x2="60" y2="120" stroke="#333338" stroke-width="1.5"/>
+  <line x1="740" y1="60" x2="680" y2="60" stroke="#333338" stroke-width="1.5"/>
+  <line x1="740" y1="60" x2="740" y2="120" stroke="#333338" stroke-width="1.5"/>
+  
+  <text x="60" y="930" font-family="'Space Grotesk', monospace" font-size="14" fill="#666670" letter-spacing="3">DE TO’ SHOP // EDITORIAL ARCHIVE</text>
+  <text x="740" y="930" font-family="'Space Grotesk', monospace" font-size="14" fill="#666670" letter-spacing="3" text-anchor="end">FIT: T-SHIRT ESSENTIAL</text>
+
+  <!-- T-Shirt Silhouette -->
+  <g filter="url(#shadow)">
+    <!-- Main Body & Sleeves -->
+    <path d="M 280 200 
+             C 330 225, 470 225, 520 200 
+             L 690 310 
+             L 630 460 
+             L 545 425 
+             L 545 780 
+             C 545 790, 535 795, 520 795 
+             L 280 795 
+             C 265 795, 255 790, 255 780 
+             L 255 425 
+             L 170 460 
+             L 110 310 
+             Z" 
+          fill="url(#shirtGrad1)" 
+          stroke="url(#metalRim)" 
+          stroke-width="2"/>
+
+    <!-- Ribbed Collar -->
+    <path d="M 330 208 C 365 240, 435 240, 470 208 C 455 220, 345 220, 330 208 Z" 
+          fill="#1C1C22" 
+          stroke="#404048" 
+          stroke-width="1.5"/>
+
+    <!-- Subtle Stitching Lines -->
+    <path d="M 255 425 L 545 425" stroke="#222228" stroke-width="1" stroke-dasharray="4 4" opacity="0.6"/>
+    <path d="M 280 200 L 255 425" stroke="#26262E" stroke-width="1.5"/>
+    <path d="M 520 200 L 545 425" stroke="#26262E" stroke-width="1.5"/>
+    <line x1="255" y1="770" x2="545" y2="770" stroke="#24242A" stroke-width="1.5"/>
+    <line x1="170" y1="440" x2="120" y2="320" stroke="#24242A" stroke-width="1.5"/>
+    <line x1="630" y1="440" x2="680" y2="320" stroke="#24242A" stroke-width="1.5"/>
+
+    <!-- Minimalist Typography Brand Print on Chest -->
+    <text x="400" y="470" font-family="'Space Grotesk', sans-serif" font-size="18" font-weight="700" fill="#EAEAEA" text-anchor="middle" letter-spacing="8">TO’ SHOP</text>
+    <text x="400" y="492" font-family="'Space Grotesk', sans-serif" font-size="10" font-weight="400" fill="#888892" text-anchor="middle" letter-spacing="4">PIMA PERUANA</text>
+  </g>
+
+  <!-- Tag overlay badge -->
+  <rect x="300" y="840" width="200" height="32" rx="4" fill="#18181C" stroke="#33333A" stroke-width="1"/>
+  <text x="400" y="861" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="600" fill="#CCCCCC" text-anchor="middle" letter-spacing="2">175 GSM · PIMA PERUANA</text>
+</svg>

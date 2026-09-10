@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" fill="none">
+  <rect width="800" height="1000" fill="#08080A"/>
+  <defs>
+    <radialGradient id="lightGlow5" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#1C1C20" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#050506" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="blackoutGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141416"/>
+      <stop offset="50%" stop-color="#0E0E10"/>
+      <stop offset="100%" stop-color="#080809"/>
+    </linearGradient>
+    <filter id="shadow5" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="25" stdDeviation="30" flood-color="#000000" flood-opacity="0.9"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="1000" fill="url(#lightGlow5)"/>
+
+  <line x1="60" y1="60" x2="120" y2="60" stroke="#2C2C33" stroke-width="1.5"/>
+  <line x1="60" y1="60" x2="60" y2="120" stroke="#2C2C33" stroke-width="1.5"/>
+  <line x1="740" y1="60" x2="680" y2="60" stroke="#2C2C33" stroke-width="1.5"/>
+  <line x1="740" y1="60" x2="740" y2="120" stroke="#2C2C33" stroke-width="1.5"/>
+  
+  <text x="60" y="930" font-family="'Space Grotesk', monospace" font-size="14" fill="#555560" letter-spacing="3">DE TO’ SHOP // PHANTOM BLACK</text>
+  <text x="740" y="930" font-family="'Space Grotesk', monospace" font-size="14" fill="#555560" letter-spacing="3" text-anchor="end">TONE: PURE VOID</text>
+
+  <g filter="url(#shadow5)">
+    <path d="M 280 200 
+             C 330 225, 470 225, 520 200 
+             L 690 310 
+             L 630 460 
+             L 545 425 
+             L 545 780 
+             C 545 790, 535 795, 520 795 
+             L 280 795 
+             C 265 795, 255 790, 255 780 
+             L 255 425 
+             L 170 460 
+             L 110 310 
+             Z" 
+          fill="url(#blackoutGrad)" 
+          stroke="#303038" 
+          stroke-width="1.8"/>
+
+    <path d="M 330 208 C 365 240, 435 240, 470 208 C 455 220, 345 220, 330 208 Z" 
+          fill="#101013" 
+          stroke="#3A3A44" 
+          stroke-width="1.5"/>
+
+    <text x="400" y="470" font-family="'Space Grotesk', sans-serif" font-size="18" font-weight="700" fill="#BBBBC5" text-anchor="middle" letter-spacing="8">TO’ SHOP</text>
+    <text x="400" y="492" font-family="'Space Grotesk', sans-serif" font-size="10" font-weight="400" fill="#666672" text-anchor="middle" letter-spacing="4">ESSENTIAL BLACKOUT</text>
+  </g>
+
+  <rect x="330" y="840" width="140" height="32" rx="4" fill="#121215" stroke="#2A2A32" stroke-width="1"/>
+  <text x="400" y="861" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="600" fill="#A1A1AA" text-anchor="middle" letter-spacing="2">ZERO PRINTS</text>
+</svg>
