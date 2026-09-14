@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowDown, Globe } from 'lucide-react';
 import { siteConfig } from '../config/site';
+import { WarpText } from './WarpText';
 
 interface HeroProps {
   onExploreClick: () => void;
@@ -41,10 +42,26 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
           <h1 className="sr-only">{siteConfig.brandName} — {siteConfig.tagline}</h1>
         </div>
 
-        {/* Brand Tagline */}
-        <p className="text-sm xs:text-base sm:text-2xl md:text-3xl font-light tracking-luxury text-zinc-300 uppercase mb-2 sm:mb-4 max-w-2xl font-sans">
-          {siteConfig.tagline}
-        </p>
+        {/* Brand Tagline with WarpText Interactive Effect */}
+        <div className="w-full max-w-xl mx-auto my-1 sm:my-2 px-2">
+          <WarpText
+            text="TU ESTILO. TU ESENCIA."
+            color="#f8f5ff"
+            warpStrength={0.06}
+            warpScale={1.5}
+            speed={0.5}
+            pointerInfluence={0.35}
+            pointerStrength={0.32}
+            refraction={0.016}
+            ripple={true}
+            fontSize="clamp(1.1rem, 3.8vw, 1.85rem)"
+            fontWeight={800}
+            fontFamily="Space Grotesk, sans-serif"
+            letterSpacing="0.14em"
+            lineHeight={1}
+            style={{ height: '50px', minHeight: '40px' }}
+          />
+        </div>
 
         {/* Editorial Subtitle / Concept */}
         <p className="text-[11px] sm:text-sm tracking-wider text-zinc-400 max-w-xs sm:max-w-lg mb-5 sm:mb-10 font-sans leading-relaxed px-2">

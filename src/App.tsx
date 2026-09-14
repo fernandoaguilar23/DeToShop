@@ -11,6 +11,7 @@ import { products, Product, CATEGORIES, CategoryId } from './data/products';
 import { ArrowRight, Globe } from 'lucide-react';
 import { siteConfig } from './config/site';
 import { Ferrofluid } from './components/Ferrofluid';
+import { WarpText } from './components/WarpText';
 
 export const App: React.FC = () => {
   // Category state defaults to the available category: 't-shirt'
@@ -77,9 +78,26 @@ export const App: React.FC = () => {
             </span>
           </div>
 
-          <h2 className="text-2xl xs:text-3xl sm:text-5xl font-black font-display tracking-tight text-white uppercase mb-2 sm:mb-3">
-            COLECCIÓN
-          </h2>
+          {/* Section Heading with Interactive WarpText */}
+          <div className="w-full max-w-xs sm:max-w-md mx-auto mb-2 sm:mb-3">
+            <WarpText
+              text="COLECCIÓN"
+              color="#ffffff"
+              warpStrength={0.07}
+              warpScale={1.6}
+              speed={0.5}
+              pointerInfluence={0.4}
+              pointerStrength={0.35}
+              refraction={0.018}
+              ripple={true}
+              fontSize="clamp(1.75rem, 5vw, 3rem)"
+              fontWeight={900}
+              fontFamily="Syncopate, Space Grotesk, sans-serif"
+              letterSpacing="0.08em"
+              lineHeight={1}
+              style={{ height: '56px', minHeight: '46px' }}
+            />
+          </div>
 
           <p className="text-xs sm:text-sm font-sans tracking-wide text-zinc-400 font-light max-w-md mx-auto">
             Explora las piezas disponibles y los próximos lanzamientos de la marca.
