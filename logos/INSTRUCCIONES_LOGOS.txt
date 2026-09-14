@@ -1,0 +1,19 @@
+﻿====================================================================
+DE TO' SHOP - CARPETA OFICIAL DE LOGOS E IDENTIDAD VISUAL
+====================================================================
+
+Pega aqui los archivos de los logos oficiales de De To' Shop.
+
+Formatos recomendados:
+- PNG con fondo transparente (ideal para mantener la estetica oscura de lujo).
+- SVG (vectorial, maxima nitidez en cualquier pantalla o dispositivo).
+- JPG o WebP en alta resolucion.
+
+Nombres sugeridos:
+1. logo.png o logo.svg         -> Logo completo / horizontal (para barra de navegacion y footer).
+2. symbol.png o symbol.svg     -> Isotipo o monograma (icono para avatar, favicon o sello).
+3. logo-white.png              -> Version blanca o monocromatica para contraste sobre negro.
+
+Cualquier imagen colocada en "public/logos/" esta inmediatamente accesible en la web como:
+/logos/nombre-de-tu-archivo.png
+====================================================================

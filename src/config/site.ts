@@ -15,6 +15,13 @@ export const siteConfig = {
   subTagline: "Luxury Streetwear · T-Shirts Pima Peruana · Estética Urbana",
   heroDescription: "Primer drop oficial confeccionado en Pima Peruana de 175 GSM. Caída limpia, máxima frescura y presencia auténtica.",
 
+  // Logos oficiales (ubicados en /public/logos/)
+  logos: {
+    main: "/logos/logo.png",
+    symbol: "/logos/symbol.png",
+    white: "/logos/logo-white.png",
+  },
+
   // WHATSAPP OFICIAL: +57 315 372 9631 (Colombia)
   // Formato internacional oficial para API de WhatsApp sin '+' ni espacios: 573153729631
   whatsappNumber: "573153729631",

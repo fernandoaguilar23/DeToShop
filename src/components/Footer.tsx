@@ -22,7 +22,15 @@ export const Footer: React.FC = () => {
           {/* Brand Col */}
           <div className="sm:col-span-2 space-y-3 sm:space-y-4">
             <div className="flex items-center space-x-3">
-              <div className="w-7 h-7 sm:w-8 sm:h-8 rounded bg-white/10 flex items-center justify-center border border-white/15 shrink-0">
+              <div className="relative w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center border border-white/15 shrink-0 overflow-hidden">
+                <img 
+                  src={siteConfig.logos.symbol} 
+                  alt="Logo De To' Shop" 
+                  className="absolute inset-0 w-full h-full object-contain p-1 z-10"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                  }}
+                />
                 <span className="text-[11px] sm:text-xs font-bold font-display text-white tracking-widest">TS</span>
               </div>
               <h3 className="text-lg sm:text-xl font-extrabold font-display tracking-widest text-white uppercase">

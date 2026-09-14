@@ -28,11 +28,21 @@ export const Navbar: React.FC<NavbarProps> = ({ onExploreClick }) => {
         
         {/* Brand Logo & Tagline */}
         <div 
-          className="flex items-center space-x-2 sm:space-x-3 cursor-pointer select-none" 
+          className="flex items-center space-x-2.5 sm:space-x-3 cursor-pointer select-none group" 
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
-          <div className="w-7 h-7 sm:w-8 sm:h-8 rounded bg-gradient-to-br from-brand-borderLight to-brand-border flex items-center justify-center border border-white/10 shadow-glow shrink-0">
-            <span className="text-[11px] sm:text-xs font-bold font-display text-white tracking-widest">TS</span>
+          <div className="relative w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-gradient-to-br from-brand-borderLight to-brand-border flex items-center justify-center border border-white/10 shadow-glow shrink-0 overflow-hidden">
+            <img 
+              src={siteConfig.logos.symbol} 
+              alt="Logo De To' Shop" 
+              className="absolute inset-0 w-full h-full object-contain p-1 z-10"
+              onError={(e) => {
+                e.currentTarget.style.display = 'none';
+              }}
+            />
+            <span className="text-[11px] sm:text-xs font-bold font-display text-white tracking-widest group-hover:scale-105 transition-transform">
+              TS
+            </span>
           </div>
           <div className="flex flex-col">
             <span className="text-sm sm:text-lg font-bold font-display tracking-widest text-white leading-tight">
