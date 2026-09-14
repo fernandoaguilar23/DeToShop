@@ -29,20 +29,19 @@ export const Footer: React.FC = () => {
               />
             </div>
             
-            <p className="text-xs sm:text-sm font-sans tracking-luxury text-zinc-300 uppercase">
+            <p className="text-xs sm:text-sm font-sans tracking-luxury text-zinc-200 uppercase font-semibold">
               {siteConfig.tagline}
             </p>
 
             <p className="text-xs text-zinc-400 max-w-md leading-relaxed font-sans font-light">
-              Catálogo digital oficial. Confección exclusiva en Pima Peruana (175 GSM / 250 GSM).
-              Diseñado para elevar tu presencia y autenticidad en cada drop.
+              Boutique digital multimarca con curaduría exclusiva en Pima Peruana. Piezas seleccionadas para elevar tu estilo y autenticidad.
             </p>
           </div>
 
           {/* Contact & WhatsApp */}
           <div className="space-y-2.5 sm:space-y-3">
             <h4 className="text-xs font-mono font-bold tracking-widest uppercase text-white">
-              Canales Oficiales
+              CONTACTO
             </h4>
             <ul className="space-y-2 text-xs font-sans">
               <li>
@@ -65,24 +64,34 @@ export const Footer: React.FC = () => {
                   <span>Instagram ({siteConfig.socials.instagramHandle})</span>
                 </a>
               </li>
-              <li className="text-zinc-300 pt-1 flex items-center space-x-1.5 font-mono text-[10px] sm:text-[11px]">
+              <li className="text-zinc-400 pt-1 flex items-center space-x-1.5 font-mono text-[10px] sm:text-[11px]">
                 <Globe className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                <span>{siteConfig.socials.shippingNotice}</span>
+                <span>Envíos Nacionales e Internacionales</span>
               </li>
             </ul>
           </div>
 
-          {/* Drops & Policies Info */}
+          {/* Drops & Collections Info */}
           <div className="space-y-2.5 sm:space-y-3">
             <h4 className="text-xs font-mono font-bold tracking-widest uppercase text-white">
-              Colecciones & Envíos
+              COLECCIONES
             </h4>
             <ul className="space-y-1.5 sm:space-y-2 text-xs font-sans text-zinc-400">
-              <li>· <strong className="text-zinc-300">T-Shirt (175 GSM)</strong>: Disponible</li>
-              <li>· <strong className="text-zinc-400">Oversize (250 GSM)</strong>: Próximamente</li>
-              <li>· <strong className="text-zinc-400">Básicas</strong>: Próximamente</li>
-              <li>· Envíos Nacionales e Internacionales</li>
-              <li>· Ventas y atención directa por WhatsApp</li>
+              <li className="flex items-center space-x-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0" />
+                <span className="text-zinc-200">T-Shirt (175 GSM)</span>
+                <span className="text-emerald-400 font-mono text-[10px] uppercase font-bold">— Disponible</span>
+              </li>
+              <li className="flex items-center space-x-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-zinc-600 shrink-0" />
+                <span>Oversize (250 GSM)</span>
+                <span className="text-zinc-500 font-mono text-[10px] uppercase">— Próximamente</span>
+              </li>
+              <li className="flex items-center space-x-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-zinc-600 shrink-0" />
+                <span>Basics</span>
+                <span className="text-zinc-500 font-mono text-[10px] uppercase">— Próximamente</span>
+              </li>
             </ul>
           </div>
 

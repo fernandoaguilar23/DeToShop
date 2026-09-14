@@ -175,11 +175,17 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
               
               {/* Product Subtitle & Name */}
               <div>
-                <span className="text-[10px] sm:text-xs font-mono tracking-widest uppercase text-emerald-400 block mb-0.5 sm:mb-1">
-                  T-SHIRT // DROP 01 DISPONIBLE
-                </span>
+                <div className="flex items-center space-x-2 mb-1">
+                  <span className="text-[10px] sm:text-xs font-mono font-bold tracking-widest uppercase text-emerald-400">
+                    {product.brand}
+                  </span>
+                  <span className="text-zinc-600">·</span>
+                  <span className="text-[10px] sm:text-xs font-mono tracking-widest uppercase text-zinc-400">
+                    DROP 01 DISPONIBLE
+                  </span>
+                </div>
                 <h2 className="text-base xs:text-lg sm:text-2xl md:text-3xl font-bold font-sans tracking-wide text-white uppercase leading-snug">
-                  {product.name}
+                  {product.modelName || product.name}
                 </h2>
               </div>
 

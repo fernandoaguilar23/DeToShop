@@ -55,12 +55,15 @@ export const FilterBar: React.FC<FilterBarProps> = ({
       {/* Sub-label showing current drop state */}
       <div className="text-center mt-2 sm:mt-3 px-4">
         {selectedCategory === 't-shirt' ? (
-          <span className="text-[10px] sm:text-[11px] font-mono tracking-widest uppercase text-zinc-400 block">
-            Mostrando {productCount} {productCount === 1 ? 'prenda' : 'prendas'} · DROP 01 DISPONIBLE
-          </span>
+          <div className="inline-flex items-center space-x-2 text-[10px] sm:text-[11px] font-mono tracking-widest uppercase text-zinc-400">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+            <span className="text-emerald-300 font-semibold">DROP 01 DISPONIBLE</span>
+            <span className="text-zinc-500">·</span>
+            <span className="text-zinc-300">{productCount} {productCount === 1 ? 'prenda' : 'prendas'}</span>
+          </div>
         ) : (
           <span className="text-[10px] sm:text-[11px] font-mono tracking-widest uppercase text-amber-400/90 block">
-            NUEVO DROP EN CAMINO · REGISTRO PARA AVISO
+            NUEVO DROP EN CAMINO · REGISTRO PARA AVISO POR WHATSAPP
           </span>
         )}
       </div>

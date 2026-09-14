@@ -54,28 +54,33 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onOpenModal }
       {/* Product Information Body */}
       <div className="p-2.5 xs:p-3 sm:p-5 flex flex-col flex-grow justify-between bg-brand-card/40">
         <div>
-          {/* Subtitle / Fabric & Weight */}
-          <span className="text-[8px] xs:text-[9px] sm:text-[10px] font-mono tracking-wider uppercase text-zinc-400 block mb-0.5 sm:mb-1 truncate">
-            {product.subtitle}
+          {/* [MARCA] */}
+          <span className="text-[9px] xs:text-[10px] sm:text-xs font-mono font-bold tracking-widest uppercase text-emerald-400 block mb-1">
+            {product.brand}
           </span>
 
-          {/* Product Name */}
-          <h3 className="text-xs xs:text-sm sm:text-base font-bold text-white tracking-wide uppercase line-clamp-1 group-hover:text-zinc-200 transition-colors">
-            {product.name}
+          {/* Product Name / Model - FULL name, NO truncation */}
+          <h3 className="text-xs sm:text-sm md:text-base font-bold text-white tracking-wide uppercase group-hover:text-zinc-200 transition-colors leading-snug break-words">
+            {product.modelName}
           </h3>
 
+          {/* PIMA PERUANA · 175 GSM */}
+          <p className="text-[8.5px] xs:text-[9.5px] sm:text-[11px] font-mono tracking-wider uppercase text-zinc-400 mt-1">
+            PIMA PERUANA · 175 GSM
+          </p>
+
           {/* Price & Sizes */}
-          <div className="mt-1.5 sm:mt-2.5 flex items-baseline justify-between gap-1 sm:gap-2">
-            <span className="text-xs xs:text-sm sm:text-lg font-bold font-mono tracking-tight text-white shrink-0">
+          <div className="mt-2 sm:mt-3 flex items-baseline justify-between gap-1 sm:gap-2">
+            <span className="text-xs xs:text-sm sm:text-base md:text-lg font-bold font-mono tracking-tight text-white shrink-0">
               {siteConfig.currency.format(product.price)}
             </span>
 
             {/* Quick sizes preview */}
-            <div className="hidden xs:flex items-center space-x-0.5 sm:space-x-1 overflow-hidden shrink-0">
+            <div className="flex items-center space-x-0.5 sm:space-x-1 overflow-hidden shrink-0">
               {product.sizes.map((sz) => (
                 <span
                   key={sz}
-                  className="px-1 py-0.5 rounded text-[8px] sm:text-[9px] font-mono text-zinc-300 bg-white/5 border border-white/10"
+                  className="px-1 sm:px-1.5 py-0.5 rounded text-[8px] sm:text-[9px] font-mono text-zinc-300 bg-white/5 border border-white/10"
                 >
                   {sz}
                 </span>
@@ -88,11 +93,11 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onOpenModal }
         <div className="mt-2.5 sm:mt-4 pt-2 sm:pt-3 border-t border-white/5 flex items-center justify-between">
           <span className="text-[10px] xs:text-xs font-semibold tracking-wider uppercase text-zinc-300 group-hover:text-white flex items-center space-x-1">
             <span>VER FICHA</span>
-            <ArrowUpRight className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-zinc-400 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            <ArrowUpRight className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-emerald-400 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
           </span>
           
-          <span className="text-[8.5px] sm:text-[10px] font-mono text-zinc-400 hidden xs:inline">
-            PIMA 175 GSM
+          <span className="text-[8.5px] sm:text-[10px] font-mono text-zinc-500">
+            {product.status === 'available' ? 'DROP 01' : 'PRÓXIMO'}
           </span>
         </div>
 

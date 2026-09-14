@@ -11,7 +11,7 @@
 
 export type ProductStatus = 'available' | 'upcoming';
 
-export type CategoryId = 't-shirt' | 'oversize' | 'basicas';
+export type CategoryId = 't-shirt' | 'oversize' | 'basics';
 
 export interface CategoryInfo {
   id: CategoryId;
@@ -46,8 +46,8 @@ export const CATEGORIES: CategoryInfo[] = [
     tagline: 'Nuevo drop en camino. Corte amplio, caída estructurada de alto gramaje.',
   },
   {
-    id: 'basicas',
-    label: 'BÁSICAS',
+    id: 'basics',
+    label: 'BASICS',
     badge: 'PRÓXIMAMENTE',
     isAvailable: false,
     dropNumber: 'DROP 03',
@@ -65,6 +65,8 @@ export interface ProductImage {
 
 export interface Product {
   id: string;
+  brand: string;
+  modelName: string;
   name: string;
   subtitle: string;
   price: number;
@@ -87,6 +89,8 @@ export interface Product {
 export const products: Product[] = [
   {
     id: "tshirt-balmain-noir",
+    brand: "BALMAIN",
+    modelName: "Paris Noir T-Shirt",
     name: "T-Shirt Balmain Paris Noir",
     subtitle: "Pima Peruana · 175 GSM",
     price: 100000,
@@ -113,6 +117,8 @@ export const products: Product[] = [
   },
   {
     id: "tshirt-balmain-blanca",
+    brand: "BALMAIN",
+    modelName: "Paris Blanca T-Shirt",
     name: "T-Shirt Balmain Paris Blanca",
     subtitle: "Pima Peruana · 175 GSM",
     price: 100000,
@@ -139,6 +145,8 @@ export const products: Product[] = [
   },
   {
     id: "tshirt-coach-noir",
+    brand: "COACH",
+    modelName: "New York Noir T-Shirt",
     name: "T-Shirt Coach New York Noir",
     subtitle: "Pima Peruana · 175 GSM",
     price: 100000,
@@ -165,6 +173,8 @@ export const products: Product[] = [
   },
   {
     id: "tshirt-coach-blanca",
+    brand: "COACH",
+    modelName: "New York Blanca T-Shirt",
     name: "T-Shirt Coach New York Blanca",
     subtitle: "Pima Peruana · 175 GSM · Empaque Oficial",
     price: 100000,
@@ -191,6 +201,8 @@ export const products: Product[] = [
   },
   {
     id: "tshirt-dg-blanca",
+    brand: "DOLCE & GABBANA",
+    modelName: "Crest Blanca T-Shirt",
     name: "T-Shirt Dolce & Gabbana Crest Blanca",
     subtitle: "Pima Peruana · 175 GSM",
     price: 100000,
@@ -217,6 +229,8 @@ export const products: Product[] = [
   },
   {
     id: "tshirt-boss-embossed-noir",
+    brand: "BOSS",
+    modelName: "Embossed Noir T-Shirt",
     name: "T-Shirt Boss Embossed Noir",
     subtitle: "Pima Peruana · 175 GSM",
     price: 100000,
@@ -243,6 +257,8 @@ export const products: Product[] = [
   },
   {
     id: "tshirt-boss-embossed-blanca",
+    brand: "BOSS",
+    modelName: "Embossed Blanca T-Shirt",
     name: "T-Shirt Boss Embossed Blanca",
     subtitle: "Pima Peruana · 175 GSM",
     price: 100000,
@@ -269,6 +285,8 @@ export const products: Product[] = [
   },
   {
     id: "tshirt-boss-circle-blanca",
+    brand: "BOSS",
+    modelName: "Monogram Circle Blanca T-Shirt",
     name: "T-Shirt Boss Monogram Circle Blanca",
     subtitle: "Pima Peruana · 175 GSM",
     price: 100000,
@@ -295,6 +313,8 @@ export const products: Product[] = [
   },
   {
     id: "tshirt-hugo-bubble-noir",
+    brand: "HUGO",
+    modelName: "Bubble Graffiti Noir T-Shirt",
     name: "T-Shirt Hugo Bubble Graffiti Noir",
     subtitle: "Pima Peruana · 175 GSM · Fit Relajado",
     price: 100000,

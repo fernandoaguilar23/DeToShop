@@ -21,14 +21,14 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
       <div className="relative z-10 max-w-5xl mx-auto w-full flex flex-col items-center text-center">
         
         {/* Availability Badge */}
-        <div className="inline-flex items-center space-x-2 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full bg-white/[0.04] border border-white/10 mb-3 sm:mb-8 backdrop-blur-md max-w-full overflow-hidden">
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse shrink-0" />
-          <span className="text-[9px] sm:text-xs font-semibold tracking-widest uppercase text-zinc-300 truncate">
-            T-SHIRT — DROP DISPONIBLE
+        <div className="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-white/[0.04] border border-white/10 mb-4 sm:mb-8 backdrop-blur-md max-w-full overflow-hidden">
+          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0 shadow-[0_0_8px_rgba(52,211,153,0.8)]" />
+          <span className="text-[10px] sm:text-xs font-mono font-bold tracking-widest uppercase text-emerald-300 truncate">
+            DROP 01 — DISPONIBLE
           </span>
           <span className="text-zinc-600 hidden xs:inline">·</span>
-          <span className="text-[8.5px] sm:text-[11px] font-mono tracking-wider text-emerald-400 uppercase hidden xs:inline">
-            PIMA PERUANA 175 GSM
+          <span className="text-[9px] sm:text-[11px] font-mono tracking-wider text-zinc-300 uppercase hidden xs:inline">
+            PIMA PERUANA · 175 GSM
           </span>
         </div>
 
@@ -64,15 +64,14 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
         </div>
 
         {/* Editorial Subtitle / Concept */}
-        <p className="text-[11px] sm:text-sm tracking-wider text-zinc-400 max-w-xs sm:max-w-lg mb-5 sm:mb-10 font-sans leading-relaxed px-2">
-          Primer drop oficial en tejido exclusivo de Pima Peruana (175 GSM).
-          Suavidad extrema, caída natural y presencia contemporánea.
+        <p className="text-xs sm:text-sm md:text-base tracking-wide text-zinc-300 max-w-xs sm:max-w-xl mb-6 sm:mb-10 font-sans font-light leading-relaxed px-2">
+          Descubre nuestro primer drop de T-Shirts en Pima Peruana. Piezas seleccionadas para quienes cuidan cada detalle de lo que llevan puesto.
         </p>
 
         {/* Visual Hero Protagonist Preview Card (Editorial Showcase) */}
         <div 
           onClick={onExploreClick}
-          className="group relative w-full max-w-[210px] xs:max-w-[250px] sm:max-w-sm aspect-[4/5] rounded-xl sm:rounded-2xl overflow-hidden glass-card cursor-pointer mb-6 sm:mb-10 transition-all duration-500 hover:scale-[1.02] hover:border-white/25 shadow-xl sm:shadow-2xl"
+          className="group relative w-full max-w-[210px] xs:max-w-[250px] sm:max-w-sm aspect-[4/5] rounded-xl sm:rounded-2xl overflow-hidden glass-card cursor-pointer mb-6 sm:mb-10 transition-all duration-500 hover:scale-[1.02] hover:border-emerald-500/30 shadow-xl sm:shadow-2xl"
         >
           <img 
             src="/fotos-camisas/balmain-negra-xl.jpeg" 
@@ -85,7 +84,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
           {/* Overlay details inside card */}
           <div className="absolute bottom-3.5 left-3.5 right-3.5 text-left flex items-end justify-between pointer-events-none">
             <div className="truncate pr-2">
-              <span className="text-[9px] sm:text-[10px] font-mono uppercase tracking-widest text-emerald-400 block">
+              <span className="text-[9px] sm:text-[10px] font-mono uppercase tracking-widest text-emerald-400 block font-bold">
                 DROP 01 // DISPONIBLE
               </span>
               <h3 className="text-xs sm:text-sm font-bold text-white tracking-wider uppercase truncate">
@@ -102,9 +101,9 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
         <div className="w-full flex justify-center px-4">
           <button
             onClick={onExploreClick}
-            className="w-full xs:w-auto min-w-[220px] sm:min-w-[260px] flex items-center justify-center space-x-3 bg-white hover:bg-zinc-200 active:scale-95 text-black px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-bold text-xs sm:text-sm uppercase tracking-widest transition-all duration-200 shadow-xl group"
+            className="w-full xs:w-auto min-w-[200px] sm:min-w-[240px] flex items-center justify-center space-x-3 bg-white hover:bg-zinc-200 active:scale-95 text-black px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-bold text-xs sm:text-sm uppercase tracking-widest transition-all duration-200 shadow-xl group"
           >
-            <span>VER COLECCIÓN T-SHIRT</span>
+            <span>VER DROP 01</span>
             <ArrowDown className="w-4 h-4 transition-transform duration-300 group-hover:translate-y-0.5" />
           </button>
         </div>
@@ -116,11 +115,11 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
             <span>Envíos Nacionales e Internacionales</span>
           </span>
           <span className="flex items-center space-x-1.5">
-            <span className="w-1 h-1 rounded-full bg-zinc-400" />
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
             <span>Pima Peruana · 175 GSM</span>
           </span>
           <span className="flex items-center space-x-1.5">
-            <span className="w-1 h-1 rounded-full bg-zinc-400" />
+            <span className="w-1.5 h-1.5 rounded-full bg-zinc-400" />
             <span>Atención Directa por WhatsApp</span>
           </span>
         </div>
