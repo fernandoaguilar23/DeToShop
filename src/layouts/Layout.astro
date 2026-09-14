@@ -1,0 +1,49 @@
+﻿---
+import '../index.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "DE TO' SHOP | Catálogo Oficial Luxury Streetwear",
+  description = "Catálogo digital exclusivo de De To' Shop (To' Shop). Camisas T-shirt, oversize y básicas en Pima Peruana. Confección premium y compra directa por WhatsApp."
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#050505" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="keywords" content="De To' Shop, To' Shop, streetwear, camisas t-shirt, pima peruana, oversize, moda urbana, ropa premium, colombia, catalogo digital" />
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/fotos-camisas/WhatsApp Image 2026-03-05 at 12.52.28 PM.jpeg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet" />
+  </head>
+  <body class="bg-brand-void text-brand-light antialiased selection:bg-brand-white selection:text-brand-void min-h-screen overflow-x-hidden">
+    <slot />
+  </body>
+</html>
