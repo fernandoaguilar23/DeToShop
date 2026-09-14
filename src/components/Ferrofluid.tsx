@@ -162,15 +162,18 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
   float mGlow = 0.0;
   if (uMouseEnabled > 0.5) {
     vec2 mp = iMouse / iResolution.y * ref;
-    float md = length(p - mp) / ref;
+    vec2 delta = p - mp;
+    float md = length(delta) / ref;
     float rr = max(uMouseRadius, 0.02);
+    float mPush = exp(-md * md / (rr * rr * 1.5)) * uMouseStrength;
+    p += normalize(delta + vec2(0.0001, 0.0001)) * mPush * 40.0;
     mGlow = exp(-md * md / (rr * rr)) * uMouseStrength;
   }
 
   float band = (uRimWidth - abs((mapeaks - 0.4) * 2.0)) * 5.0;
   float ltn = clamp(band - vn(p + dir * (t * spd * 0.5), 60.0, 12.0) * uShimmer, 0.0, 1.0);
   ltn = pow(ltn, uSharpness) * uGlow;
-  ltn *= clamp(1.0 - mGlow, 0.0, 1.0);
+  ltn = max(ltn * (1.0 - mGlow * 0.7), mGlow * 0.5);
 
   float h = clamp(0.5 + (peaks - peaks2) * 0.8, 0.0, 1.0);
   vec3 col = palette(h);
@@ -239,6 +242,7 @@ export const Ferrofluid: React.FC<FerrofluidProps> = ({
   const geometryRef = useRef<any>(null);
   const rendererRef = useRef<any>(null);
   const mouseTargetRef = useRef<[number, number]>([0, 0]);
+  const lastTimeRef = useRef<number>(0);
   const colorsKey = JSON.stringify(colors);
 
   useEffect(() => {
@@ -313,18 +317,31 @@ export const Ferrofluid: React.FC<FerrofluidProps> = ({
     const ro = new ResizeObserver(resize);
     ro.observe(container);
 
-    const onPointerMove = (e: PointerEvent) => {
+    const updatePointerPos = (clientX: number, clientY: number) => {
       const rect = canvas.getBoundingClientRect();
       const sc = renderer.dpr || 1;
-      const x = (e.clientX - rect.left) * sc;
-      const y = (rect.height - (e.clientY - rect.top)) * sc;
+      const x = (clientX - rect.left) * sc;
+      const y = (rect.height - (clientY - rect.top)) * sc;
       mouseTargetRef.current = [x, y];
       if (mouseDampening <= 0) {
         uniforms.iMouse.value = [x, y];
       }
     };
+
+    const onPointerMove = (e: PointerEvent) => {
+      updatePointerPos(e.clientX, e.clientY);
+    };
+
+    const onTouchMove = (e: TouchEvent) => {
+      if (e.touches && e.touches[0]) {
+        updatePointerPos(e.touches[0].clientX, e.touches[0].clientY);
+      }
+    };
+
     if (mouseInteraction) {
-      window.addEventListener('pointermove', onPointerMove);
+      window.addEventListener('pointermove', onPointerMove, { passive: true });
+      window.addEventListener('touchstart', onTouchMove, { passive: true });
+      window.addEventListener('touchmove', onTouchMove, { passive: true });
     }
 
     const loop = (t: number) => {
@@ -356,7 +373,11 @@ export const Ferrofluid: React.FC<FerrofluidProps> = ({
 
     return () => {
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
-      if (mouseInteraction) window.removeEventListener('pointermove', onPointerMove);
+      if (mouseInteraction) {
+        window.removeEventListener('pointermove', onPointerMove);
+        window.removeEventListener('touchstart', onTouchMove);
+        window.removeEventListener('touchmove', onTouchMove);
+      }
       ro.disconnect();
       if (canvas.parentElement === container) {
         container.removeChild(canvas);

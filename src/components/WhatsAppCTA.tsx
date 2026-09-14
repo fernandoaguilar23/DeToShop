@@ -31,7 +31,8 @@ export const WhatsAppCTA: React.FC = () => {
 
           {/* Text */}
           <p className="text-sm sm:text-base text-zinc-300 max-w-xl mx-auto mb-8 font-light leading-relaxed">
-            Confirma disponibilidad, tallas y opciones de envío directamente con nuestro equipo. Te asesoramos paso a paso para que recibas tu drop sin complicaciones.
+            Confirma disponibilidad, tallas y opciones de envío directamente con nuestro equipo.
+            <span className="block mt-1">Te asesoramos paso a paso para que recibas tu drop sin complicaciones.</span>
           </p>
 
           {/* Main Action Button */}

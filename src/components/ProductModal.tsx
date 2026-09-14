@@ -262,7 +262,11 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
                   Descripción & Confección
                 </h4>
                 <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed font-sans font-light">
-                  {product.description}
+                  {product.description.split('. ').map((part, i, arr) => (
+                    <span key={i} className={i > 0 ? "block mt-1" : ""}>
+                      {part}{i < arr.length - 1 ? '.' : ''}
+                    </span>
+                  ))}
                 </p>
               </div>
 

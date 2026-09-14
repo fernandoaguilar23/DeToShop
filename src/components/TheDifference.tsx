@@ -19,7 +19,7 @@ export const TheDifference: React.FC = () => {
     },
     {
       num: '03',
-      title: 'CURADURÍA MULTIMARCA',
+      title: 'MULTIMARCA',
       description: 'Seleccionamos cada pieza para construir drops con identidad propia.',
       detail: 'Firmas icónicas con estilo contemporáneo.',
       icon: ShieldCheck,

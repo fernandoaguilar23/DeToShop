@@ -40,7 +40,8 @@ export const SeenOnYou: React.FC = () => {
 
           {/* Editorial Message */}
           <p className="text-xs sm:text-sm md:text-base text-zinc-300 max-w-xl mx-auto mb-8 font-light leading-relaxed">
-            El estilo cobra vida cuando lo llevas puesto. Próximamente compartiremos aquí las tomas reales de quienes ya visten nuestros drops oficiales.
+            El estilo cobra vida cuando lo llevas puesto.
+            <span className="block mt-1">Próximamente compartiremos aquí las tomas reales de quienes ya visten nuestros drops oficiales.</span>
           </p>
 
           {/* Aesthetic Mock Lookbook Frame Slots */}

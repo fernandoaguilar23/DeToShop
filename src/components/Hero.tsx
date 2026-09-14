@@ -65,7 +65,8 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
 
         {/* Editorial Subtitle / Concept */}
         <p className="text-xs sm:text-sm md:text-base tracking-wide text-zinc-300 max-w-xs sm:max-w-xl mb-6 sm:mb-10 font-sans font-light leading-relaxed px-2">
-          Descubre nuestro primer drop de T-Shirts en Pima Peruana. Piezas seleccionadas para quienes cuidan cada detalle de lo que llevan puesto.
+          Descubre nuestro primer drop de T-Shirts en Pima Peruana.
+          <span className="block mt-1">Piezas seleccionadas para quienes cuidan cada detalle de lo que llevan puesto.</span>
         </p>
 
         {/* Visual Hero Protagonist Preview Card (Editorial Showcase) */}

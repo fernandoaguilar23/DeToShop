@@ -108,7 +108,8 @@ export const App: React.FC = () => {
           </div>
 
           <p className="text-xs sm:text-sm font-sans tracking-wide text-zinc-300 font-light max-w-lg mx-auto leading-relaxed">
-            Piezas seleccionadas para cada drop. Descubre lo que está disponible y prepárate para lo que viene.
+            Piezas seleccionadas para cada drop.
+            <span className="block mt-1">Descubre lo que está disponible y prepárate para lo que viene.</span>
           </p>
         </div>
 

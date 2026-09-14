@@ -34,7 +34,8 @@ export const Footer: React.FC = () => {
             </p>
 
             <p className="text-xs text-zinc-400 max-w-md leading-relaxed font-sans font-light">
-              Boutique digital multimarca con curaduría exclusiva en Pima Peruana. Piezas seleccionadas para elevar tu estilo y autenticidad.
+              Boutique digital multimarca con curaduría exclusiva en Pima Peruana.
+              <span className="block mt-1">Piezas seleccionadas para elevar tu estilo y autenticidad.</span>
             </p>
           </div>
 

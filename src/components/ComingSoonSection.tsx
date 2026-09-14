@@ -93,7 +93,11 @@ export const ComingSoonSection: React.FC = () => {
 
                 {/* Description */}
                 <p className="text-xs sm:text-sm text-zinc-400 font-sans font-light leading-relaxed mb-6">
-                  {drop.description}
+                  {drop.description.split('. ').map((part, i, arr) => (
+                    <span key={i} className={i > 0 ? "block mt-1" : ""}>
+                      {part}{i < arr.length - 1 ? '.' : ''}
+                    </span>
+                  ))}
                 </p>
 
                 {/* Key features */}
