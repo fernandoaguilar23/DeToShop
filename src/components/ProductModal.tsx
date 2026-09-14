@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { X, MessageCircle, Check, Share2, Package, ShieldCheck, Globe } from 'lucide-react';
 import { Product } from '../data/products';
 import { siteConfig } from '../config/site';
-import { ElectricBorder } from './ElectricBorder';
 
 interface ProductModalProps {
   product: Product | null;
@@ -72,25 +71,16 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
   const activeImage = product.images[activeImageIndex] || product.images[0];
 
   return (
-    <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-2 sm:p-4 md:p-6 bg-black/90 backdrop-blur-xl animate-fade-in overflow-hidden">
+    <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 md:p-6 bg-black/90 backdrop-blur-xl animate-fade-in overflow-hidden">
       {/* Background click dismiss */}
-      <div className="fixed inset-0 -z-10" onClick={onClose} />
+      <div className="absolute inset-0" onClick={onClose} />
 
-      {/* Modal Container with ElectricBorder */}
+      {/* Modal Container */}
       <div 
-        className="relative z-10 w-full max-w-4xl max-h-[94vh] sm:max-h-[90vh] flex flex-col animate-slide-up"
+        className="relative z-10 w-full max-w-4xl max-h-[94vh] sm:max-h-[90vh] bg-brand-void sm:bg-brand-card border-t sm:border border-white/10 rounded-t-3xl sm:rounded-3xl shadow-2xl flex flex-col overflow-hidden animate-slide-up"
         onClick={(e) => e.stopPropagation()}
       >
-        <ElectricBorder
-          color="#f70e0e"
-          speed={0.8}
-          chaos={0.12}
-          thickness={2}
-          borderRadius={24}
-          className="w-full h-full max-h-[94vh] sm:max-h-[90vh] flex flex-col"
-        >
-          <div className="relative w-full h-full max-h-[94vh] sm:max-h-[90vh] bg-brand-void sm:bg-brand-card rounded-3xl shadow-2xl flex flex-col overflow-hidden border border-red-500/20">
-            {/* Header bar on modal */}
+        {/* Header bar on modal */}
         <div className="flex items-center justify-between px-4 sm:px-6 py-3.5 sm:py-4 border-b border-white/10 bg-brand-void/95 sticky top-0 z-30 backdrop-blur-md">
           <div className="flex items-center space-x-2 truncate pr-2">
             <span className="text-xs font-bold font-display tracking-widest text-white uppercase shrink-0">
@@ -312,8 +302,6 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
 
         </div>
 
-          </div>
-        </ElectricBorder>
       </div>
 
       {/* Copied Toast Notification */}

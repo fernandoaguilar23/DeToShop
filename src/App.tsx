@@ -10,6 +10,7 @@ import { Footer } from './components/Footer';
 import { products, Product, CATEGORIES, CategoryId } from './data/products';
 import { ArrowRight, Globe } from 'lucide-react';
 import { siteConfig } from './config/site';
+import { Ferrofluid } from './components/Ferrofluid';
 
 export const App: React.FC = () => {
   // Category state defaults to the available category: 't-shirt'
@@ -33,15 +34,39 @@ export const App: React.FC = () => {
   );
 
   return (
-    <div className="min-h-screen bg-brand-void text-brand-light flex flex-col selection:bg-white selection:text-black overflow-x-hidden">
+    <div className="relative min-h-screen bg-brand-void text-brand-light flex flex-col selection:bg-white selection:text-black overflow-x-hidden">
+      {/* Interactive Liquid Ferrofluid Background */}
+      <div className="fixed inset-0 pointer-events-none z-0 opacity-40 overflow-hidden">
+        <Ferrofluid
+          colors={["#ffffff", "#ffffff", "#ffffff"]}
+          speed={0.5}
+          scale={1.6}
+          turbulence={1}
+          fluidity={0.1}
+          rimWidth={0.2}
+          sharpness={2.5}
+          shimmer={1.5}
+          glow={2}
+          flowDirection="down"
+          opacity={0.65}
+          mouseInteraction={true}
+          mouseStrength={1}
+          mouseRadius={0.35}
+        />
+      </div>
+
       {/* Top Navbar */}
-      <Navbar onExploreClick={scrollToTshirtCollection} />
+      <div className="relative z-40">
+        <Navbar onExploreClick={scrollToTshirtCollection} />
+      </div>
 
       {/* Hero Portada */}
-      <Hero onExploreClick={scrollToTshirtCollection} />
+      <div className="relative z-10">
+        <Hero onExploreClick={scrollToTshirtCollection} />
+      </div>
 
       {/* MAIN CATALOG SECTION */}
-      <main ref={collectionRef} className="flex-grow max-w-7xl mx-auto w-full px-3.5 sm:px-6 lg:px-8 py-10 sm:py-16 scroll-mt-16 sm:scroll-mt-20">
+      <main ref={collectionRef} className="relative z-10 flex-grow max-w-7xl mx-auto w-full px-3.5 sm:px-6 lg:px-8 py-10 sm:py-16 scroll-mt-16 sm:scroll-mt-20">
         
         {/* Section Title & Concept */}
         <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-12 px-2">
