@@ -162,18 +162,15 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
   float mGlow = 0.0;
   if (uMouseEnabled > 0.5) {
     vec2 mp = iMouse / iResolution.y * ref;
-    vec2 delta = p - mp;
-    float md = length(delta) / ref;
+    float md = length(p - mp) / ref;
     float rr = max(uMouseRadius, 0.02);
-    float mPush = exp(-md * md / (rr * rr * 1.5)) * uMouseStrength;
-    p += normalize(delta + vec2(0.0001, 0.0001)) * mPush * 40.0;
     mGlow = exp(-md * md / (rr * rr)) * uMouseStrength;
   }
 
   float band = (uRimWidth - abs((mapeaks - 0.4) * 2.0)) * 5.0;
   float ltn = clamp(band - vn(p + dir * (t * spd * 0.5), 60.0, 12.0) * uShimmer, 0.0, 1.0);
   ltn = pow(ltn, uSharpness) * uGlow;
-  ltn = max(ltn * (1.0 - mGlow * 0.7), mGlow * 0.5);
+  ltn *= clamp(1.0 - mGlow, 0.0, 1.0);
 
   float h = clamp(0.5 + (peaks - peaks2) * 0.8, 0.0, 1.0);
   vec3 col = palette(h);
@@ -250,7 +247,7 @@ export const Ferrofluid: React.FC<FerrofluidProps> = ({
     if (!container) return;
 
     const renderer = new Renderer({
-      dpr: dpr ?? (typeof window !== 'undefined' ? Math.min(window.devicePixelRatio || 1, 2) : 1),
+      dpr: dpr ?? (typeof window !== 'undefined' ? window.devicePixelRatio || 1 : 1),
       alpha: true,
       antialias: true
     });
@@ -258,12 +255,9 @@ export const Ferrofluid: React.FC<FerrofluidProps> = ({
     const gl = renderer.gl;
     const canvas = gl.canvas;
     gl.clearColor(0, 0, 0, 0);
-    canvas.style.position = 'absolute';
-    canvas.style.inset = '0';
     canvas.style.width = '100%';
     canvas.style.height = '100%';
     canvas.style.display = 'block';
-    canvas.style.pointerEvents = 'none';
     container.appendChild(canvas);
 
     const { arr, count, avg } = prepColors(colors);
