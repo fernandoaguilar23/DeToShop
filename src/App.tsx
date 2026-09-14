@@ -16,6 +16,8 @@ import { products, Product, CATEGORIES, CategoryId } from './data/products';
 import { Ferrofluid } from './components/Ferrofluid';
 import { WarpText } from './components/WarpText';
 
+const FERROFLUID_COLORS = ['#ffffff', '#ffffff', '#ffffff'];
+
 export const App: React.FC = () => {
   // Category state defaults to the available category: 't-shirt'
   const [selectedCategory, setSelectedCategory] = useState<CategoryId>('t-shirt');
@@ -38,24 +40,24 @@ export const App: React.FC = () => {
   );
 
   return (
-    <div className="relative min-h-screen bg-brand-void text-brand-light flex flex-col selection:bg-white selection:text-black overflow-x-hidden">
+    <div className="relative min-h-screen bg-transparent text-brand-light flex flex-col selection:bg-white selection:text-black overflow-x-hidden">
       {/* Interactive Liquid Ferrofluid Background */}
-      <div className="fixed inset-0 pointer-events-none z-0 opacity-40 overflow-hidden">
+      <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden opacity-85">
         <Ferrofluid
-          colors={["#ffffff", "#ffffff", "#ffffff"]}
-          speed={0.5}
-          scale={1.6}
-          turbulence={1}
-          fluidity={0.1}
-          rimWidth={0.2}
-          sharpness={2.5}
-          shimmer={1.5}
-          glow={2}
+          colors={FERROFLUID_COLORS}
+          speed={0.45}
+          scale={1.5}
+          turbulence={1.0}
+          fluidity={0.12}
+          rimWidth={0.45}
+          sharpness={2.0}
+          shimmer={1.8}
+          glow={2.5}
           flowDirection="down"
-          opacity={0.65}
+          opacity={0.9}
           mouseInteraction={true}
-          mouseStrength={1}
-          mouseRadius={0.35}
+          mouseStrength={1.2}
+          mouseRadius={0.4}
         />
       </div>
 

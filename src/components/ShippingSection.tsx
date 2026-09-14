@@ -24,7 +24,7 @@ export const ShippingSection: React.FC = () => {
   ];
 
   return (
-    <section id="shipping" className="relative z-10 w-full py-14 sm:py-20 px-3.5 sm:px-6 lg:px-8 border-t border-white/5 bg-brand-void">
+    <section id="shipping" className="relative z-10 w-full py-14 sm:py-20 px-3.5 sm:px-6 lg:px-8 border-t border-white/5 bg-transparent">
       <div className="max-w-7xl mx-auto">
         
         {/* Section Header */}

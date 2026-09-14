@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Renderer, Program, Mesh, Triangle } from 'ogl';
 import './Ferrofluid.css';
 
@@ -239,7 +239,7 @@ export const Ferrofluid: React.FC<FerrofluidProps> = ({
   const geometryRef = useRef<any>(null);
   const rendererRef = useRef<any>(null);
   const mouseTargetRef = useRef<[number, number]>([0, 0]);
-  const lastTimeRef = useRef<number>(0);
+  const colorsKey = JSON.stringify(colors);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -254,15 +254,18 @@ export const Ferrofluid: React.FC<FerrofluidProps> = ({
     const gl = renderer.gl;
     const canvas = gl.canvas;
     gl.clearColor(0, 0, 0, 0);
+    canvas.style.position = 'absolute';
+    canvas.style.inset = '0';
     canvas.style.width = '100%';
     canvas.style.height = '100%';
     canvas.style.display = 'block';
+    canvas.style.pointerEvents = 'none';
     container.appendChild(canvas);
 
     const { arr, count, avg } = prepColors(colors);
 
     const uniforms: any = {
-      iResolution: { value: [gl.drawingBufferWidth, gl.drawingBufferHeight, 1] },
+      iResolution: { value: [gl.drawingBufferWidth || 1920, gl.drawingBufferHeight || 1080, 1] },
       iMouse: { value: [0, 0] },
       iTime: { value: 0 },
       uColor0: { value: arr[0] },
@@ -376,7 +379,7 @@ export const Ferrofluid: React.FC<FerrofluidProps> = ({
   }, [
     dpr,
     paused,
-    colors,
+    colorsKey,
     speed,
     scale,
     turbulence,
