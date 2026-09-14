@@ -17,9 +17,12 @@ export const siteConfig = {
 
   // Logos oficiales (ubicados en /public/logos/)
   logos: {
-    main: "/logos/logo.png",
-    symbol: "/logos/symbol.png",
-    white: "/logos/logo-white.png",
+    main: "/logos/horizontal-blanco.png",
+    symbol: "/logos/cuadrado-negro.png",
+    squareWhite: "/logos/cuadrado-blanco.png",
+    horizontalWhite: "/logos/horizontal-blanco.png",
+    horizontalDark: "/logos/horizontal-negro.png",
+    transparentDark: "/logos/transparente-negro.png",
   },
 
   // WHATSAPP OFICIAL: +57 315 372 9631 (Colombia)

@@ -26,32 +26,16 @@ export const Navbar: React.FC<NavbarProps> = ({ onExploreClick }) => {
 
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-14 sm:h-20 flex items-center justify-between">
         
-        {/* Brand Logo & Tagline */}
+        {/* Brand Official Logo */}
         <div 
-          className="flex items-center space-x-2.5 sm:space-x-3 cursor-pointer select-none group" 
+          className="flex items-center cursor-pointer select-none group py-1" 
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
-          <div className="relative w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-gradient-to-br from-brand-borderLight to-brand-border flex items-center justify-center border border-white/10 shadow-glow shrink-0 overflow-hidden">
-            <img 
-              src={siteConfig.logos.symbol} 
-              alt="Logo De To' Shop" 
-              className="absolute inset-0 w-full h-full object-contain p-1 z-10"
-              onError={(e) => {
-                e.currentTarget.style.display = 'none';
-              }}
-            />
-            <span className="text-[11px] sm:text-xs font-bold font-display text-white tracking-widest group-hover:scale-105 transition-transform">
-              TS
-            </span>
-          </div>
-          <div className="flex flex-col">
-            <span className="text-sm sm:text-lg font-bold font-display tracking-widest text-white leading-tight">
-              {siteConfig.brandName}
-            </span>
-            <span className="hidden sm:inline-block text-[10px] uppercase tracking-luxury text-zinc-400 font-medium">
-              Luxury Streetwear
-            </span>
-          </div>
+          <img 
+            src={siteConfig.logos.horizontalWhite} 
+            alt={siteConfig.brandName} 
+            className="h-7 xs:h-8 sm:h-9 md:h-10 w-auto object-contain brightness-105 group-hover:opacity-90 transition-all duration-300"
+          />
         </div>
 
         {/* Navigation Actions */}

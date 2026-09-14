@@ -31,10 +31,15 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
           </span>
         </div>
 
-        {/* Brand Name Imposing Title */}
-        <h1 className="text-3xl xs:text-5xl sm:text-7xl md:text-8xl font-black font-display tracking-tight text-white uppercase leading-none mb-3 sm:mb-4 select-none drop-shadow-2xl">
-          {siteConfig.brandName}
-        </h1>
+        {/* Brand Official Logo Presentation */}
+        <div className="w-full max-w-[260px] xs:max-w-[320px] sm:max-w-md md:max-w-lg mb-4 sm:mb-6 px-4">
+          <img 
+            src={siteConfig.logos.horizontalWhite} 
+            alt={siteConfig.brandName} 
+            className="w-full h-auto object-contain mx-auto filter drop-shadow-[0_4px_30px_rgba(255,255,255,0.18)] select-none"
+          />
+          <h1 className="sr-only">{siteConfig.brandName} — {siteConfig.tagline}</h1>
+        </div>
 
         {/* Brand Tagline */}
         <p className="text-base xs:text-lg sm:text-2xl md:text-3xl font-light tracking-luxury text-zinc-300 uppercase mb-3 sm:mb-4 max-w-2xl font-sans">
