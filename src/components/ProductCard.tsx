@@ -87,7 +87,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onOpenModal }
         {/* Card Action Button */}
         <div className="mt-4 pt-3 border-t border-white/5 flex items-center justify-between">
           <span className="text-xs font-semibold tracking-widest uppercase text-zinc-300 group-hover:text-white flex items-center space-x-1">
-            <span>VER PRENDA</span>
+            <span>VER FICHA</span>
             <ArrowUpRight className="w-3.5 h-3.5 text-zinc-400 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
           </span>
           
