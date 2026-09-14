@@ -96,8 +96,8 @@ export const App: React.FC = () => {
 
         {/* CONTENT RENDER: AVAILABLE PRODUCTS OR COMING SOON TEASER */}
         {currentCategoryInfo.isAvailable ? (
-          /* Responsive Products Grid */
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8 mt-6 sm:mt-8 animate-fade-in max-w-md sm:max-w-none mx-auto">
+          /* Responsive Products Grid: 2 columns on mobile, 3 on desktop */
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-2.5 xs:gap-3.5 sm:gap-6 lg:gap-8 mt-5 sm:mt-8 animate-fade-in max-w-7xl mx-auto">
             {filteredProducts.map((product) => (
               <ProductCard
                 key={product.id}

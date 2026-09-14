@@ -8,31 +8,31 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
   return (
-    <section className="relative min-h-[85vh] sm:min-h-[92vh] flex items-center justify-center overflow-hidden px-4 sm:px-6 pt-6 sm:pt-8 pb-12 sm:pb-16">
+    <section className="relative min-h-[70vh] sm:min-h-[90vh] flex items-center justify-center overflow-hidden px-3.5 sm:px-6 pt-4 sm:pt-8 pb-8 sm:pb-16">
       {/* Background Lighting & Atmospheric Glow */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Cinematic top radial light */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] sm:w-[650px] h-[280px] sm:h-[650px] bg-white/[0.03] rounded-full blur-3xl" />
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[240px] sm:w-[650px] h-[240px] sm:h-[650px] bg-white/[0.03] rounded-full blur-3xl" />
         {/* Bottom subtle mood glow */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-[250px] sm:w-[500px] h-[180px] bg-zinc-800/[0.15] rounded-full blur-2xl" />
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-[220px] sm:w-[500px] h-[160px] bg-zinc-800/[0.15] rounded-full blur-2xl" />
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto w-full flex flex-col items-center text-center">
         
         {/* Availability Badge */}
-        <div className="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-white/[0.04] border border-white/10 mb-4 sm:mb-8 backdrop-blur-md max-w-full overflow-hidden">
+        <div className="inline-flex items-center space-x-2 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full bg-white/[0.04] border border-white/10 mb-3 sm:mb-8 backdrop-blur-md max-w-full overflow-hidden">
           <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse shrink-0" />
-          <span className="text-[10px] sm:text-xs font-semibold tracking-widest uppercase text-zinc-300 truncate">
+          <span className="text-[9px] sm:text-xs font-semibold tracking-widest uppercase text-zinc-300 truncate">
             T-SHIRT — DROP DISPONIBLE
           </span>
           <span className="text-zinc-600 hidden xs:inline">·</span>
-          <span className="text-[9px] sm:text-[11px] font-mono tracking-wider text-emerald-400 uppercase hidden xs:inline">
+          <span className="text-[8.5px] sm:text-[11px] font-mono tracking-wider text-emerald-400 uppercase hidden xs:inline">
             PIMA PERUANA 175 GSM
           </span>
         </div>
 
         {/* Brand Official Logo Presentation */}
-        <div className="w-full max-w-[260px] xs:max-w-[320px] sm:max-w-md md:max-w-lg mb-4 sm:mb-6 px-4">
+        <div className="w-full max-w-[220px] xs:max-w-[280px] sm:max-w-md md:max-w-lg mb-3 sm:mb-6 px-4">
           <img 
             src={siteConfig.logos.horizontalWhite} 
             alt={siteConfig.brandName} 
@@ -42,12 +42,12 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
         </div>
 
         {/* Brand Tagline */}
-        <p className="text-base xs:text-lg sm:text-2xl md:text-3xl font-light tracking-luxury text-zinc-300 uppercase mb-3 sm:mb-4 max-w-2xl font-sans">
+        <p className="text-sm xs:text-base sm:text-2xl md:text-3xl font-light tracking-luxury text-zinc-300 uppercase mb-2 sm:mb-4 max-w-2xl font-sans">
           {siteConfig.tagline}
         </p>
 
         {/* Editorial Subtitle / Concept */}
-        <p className="text-xs sm:text-sm tracking-wider text-zinc-400 max-w-md sm:max-w-lg mb-6 sm:mb-10 font-sans leading-relaxed px-2">
+        <p className="text-[11px] sm:text-sm tracking-wider text-zinc-400 max-w-xs sm:max-w-lg mb-5 sm:mb-10 font-sans leading-relaxed px-2">
           Primer drop oficial en tejido exclusivo de Pima Peruana (175 GSM).
           Suavidad extrema, caída natural y presencia contemporánea.
         </p>
@@ -55,7 +55,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
         {/* Visual Hero Protagonist Preview Card (Editorial Showcase) */}
         <div 
           onClick={onExploreClick}
-          className="group relative w-full max-w-[270px] xs:max-w-xs sm:max-w-sm aspect-[4/5] rounded-2xl overflow-hidden glass-card cursor-pointer mb-8 sm:mb-10 transition-all duration-500 hover:scale-[1.02] hover:border-white/25 shadow-2xl"
+          className="group relative w-full max-w-[210px] xs:max-w-[250px] sm:max-w-sm aspect-[4/5] rounded-xl sm:rounded-2xl overflow-hidden glass-card cursor-pointer mb-6 sm:mb-10 transition-all duration-500 hover:scale-[1.02] hover:border-white/25 shadow-xl sm:shadow-2xl"
         >
           <img 
             src="/fotos-camisas/balmain-negra-xl.jpeg" 

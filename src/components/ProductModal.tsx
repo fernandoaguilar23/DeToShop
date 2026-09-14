@@ -77,11 +77,11 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
 
       {/* Modal Container */}
       <div 
-        className="relative z-10 w-full max-w-4xl max-h-[94vh] sm:max-h-[90vh] bg-brand-void sm:bg-brand-card border-t sm:border border-white/10 rounded-t-3xl sm:rounded-3xl shadow-2xl flex flex-col overflow-hidden animate-slide-up"
+        className="relative z-10 w-full max-w-3xl max-h-[90vh] sm:max-h-[85vh] bg-brand-void sm:bg-brand-card border-t sm:border border-white/10 rounded-t-2xl sm:rounded-3xl shadow-2xl flex flex-col overflow-hidden animate-slide-up"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header bar on modal */}
-        <div className="flex items-center justify-between px-4 sm:px-6 py-3.5 sm:py-4 border-b border-white/10 bg-brand-void/95 sticky top-0 z-30 backdrop-blur-md">
+        <div className="flex items-center justify-between px-3.5 sm:px-6 py-2.5 sm:py-3.5 border-b border-white/10 bg-brand-void/95 sticky top-0 z-30 backdrop-blur-md">
           <div className="flex items-center space-x-2 truncate pr-2">
             <span className="text-xs font-bold font-display tracking-widest text-white uppercase shrink-0">
               {siteConfig.brandName}
@@ -95,28 +95,28 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
           <div className="flex items-center space-x-1.5 sm:space-x-2 shrink-0">
             <button
               onClick={handleShare}
-              className="p-2 sm:p-2.5 rounded-full bg-white/5 hover:bg-white/10 text-zinc-300 hover:text-white transition-colors"
+              className="p-1.5 sm:p-2.5 rounded-full bg-white/5 hover:bg-white/10 text-zinc-300 hover:text-white transition-colors"
               title="Compartir enlace de prenda"
             >
-              <Share2 className="w-4 h-4" />
+              <Share2 className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             </button>
             <button
               onClick={onClose}
-              className="p-2 sm:p-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
+              className="p-1.5 sm:p-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
               title="Cerrar vista"
             >
-              <X className="w-5 h-5" />
+              <X className="w-4 h-4 sm:w-5 sm:h-5" />
             </button>
           </div>
         </div>
 
         {/* Modal Scrollable Body */}
-        <div className="overflow-y-auto p-4 sm:p-6 md:p-8 space-y-6 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-8 no-scrollbar pb-8 sm:pb-8">
+        <div className="overflow-y-auto p-3.5 sm:p-6 md:p-8 space-y-4 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-6 md:gap-8 no-scrollbar pb-6 sm:pb-8">
           
           {/* LEFT: GALLERY SECTION */}
-          <div className="flex flex-col space-y-3">
-            {/* Main Active Image (9:16 vertical poster) */}
-            <div className="relative aspect-[9/16] max-h-[50vh] sm:max-h-[68vh] w-full max-w-[320px] sm:max-w-none mx-auto rounded-2xl overflow-hidden bg-brand-black border border-white/10 shadow-lg">
+          <div className="flex flex-col space-y-2.5 sm:space-y-3">
+            {/* Main Active Image (compact 4:5 on mobile, 9:16 poster on desktop) */}
+            <div className="relative aspect-[4/5] sm:aspect-[9/16] max-h-[30vh] xs:max-h-[34vh] sm:max-h-[58vh] w-full max-w-[210px] xs:max-w-[240px] sm:max-w-none mx-auto rounded-xl sm:rounded-2xl overflow-hidden bg-brand-black border border-white/10 shadow-md">
               <img
                 src={activeImage?.url}
                 alt={activeImage?.label || product.name}
@@ -124,25 +124,25 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
               />
 
               {/* Status Badge */}
-              <div className="absolute top-3 left-3">
-                <span className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full text-[10px] sm:text-xs font-medium font-mono tracking-widest uppercase bg-zinc-900/90 text-emerald-400 border border-emerald-500/30 backdrop-blur-md shadow-md">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              <div className="absolute top-2 left-2 sm:top-3 sm:left-3">
+                <span className="inline-flex items-center space-x-1 sm:space-x-1.5 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-[8.5px] sm:text-xs font-medium font-mono tracking-widest uppercase bg-zinc-900/90 text-emerald-400 border border-emerald-500/30 backdrop-blur-md shadow-md">
+                  <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-emerald-400 animate-pulse" />
                   <span>DISPONIBLE</span>
                 </span>
               </div>
 
               {/* Packaged indicator badge */}
               {activeImage?.isPackaged && (
-                <div className="absolute bottom-3 left-3 inline-flex items-center space-x-1.5 px-2.5 py-1 rounded-lg bg-black/80 text-[10px] font-mono text-zinc-300 border border-white/15 backdrop-blur-sm">
-                  <Package className="w-3.5 h-3.5 text-zinc-400" />
-                  <span>PRESENTACIÓN EN EMPAQUE</span>
+                <div className="absolute bottom-2 left-2 sm:bottom-3 sm:left-3 inline-flex items-center space-x-1 sm:space-x-1.5 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md sm:rounded-lg bg-black/80 text-[8.5px] sm:text-[10px] font-mono text-zinc-300 border border-white/15 backdrop-blur-sm">
+                  <Package className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-zinc-400" />
+                  <span>EMPAQUE OFICIAL</span>
                 </div>
               )}
             </div>
 
             {/* Thumbnail Selectors (if product has multiple photos) */}
             {product.images.length > 1 && (
-              <div className="grid grid-cols-3 gap-2 pt-1 max-w-[320px] sm:max-w-none mx-auto w-full">
+              <div className="grid grid-cols-3 gap-1.5 sm:gap-2 pt-0.5 max-w-[210px] xs:max-w-[240px] sm:max-w-none mx-auto w-full">
                 {product.images.map((img, idx) => (
                   <button
                     key={idx}
@@ -170,38 +170,38 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
           </div>
 
           {/* RIGHT: DETAILS & WHATSAPP ACTION */}
-          <div className="flex flex-col justify-between space-y-6">
-            <div className="space-y-4">
+          <div className="flex flex-col justify-between space-y-4 sm:space-y-6">
+            <div className="space-y-3 sm:space-y-4">
               
               {/* Product Subtitle & Name */}
               <div>
-                <span className="text-[11px] sm:text-xs font-mono tracking-widest uppercase text-emerald-400 block mb-1">
+                <span className="text-[10px] sm:text-xs font-mono tracking-widest uppercase text-emerald-400 block mb-0.5 sm:mb-1">
                   T-SHIRT // DROP 01 DISPONIBLE
                 </span>
-                <h2 className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-bold font-sans tracking-wide text-white uppercase leading-snug">
+                <h2 className="text-base xs:text-lg sm:text-2xl md:text-3xl font-bold font-sans tracking-wide text-white uppercase leading-snug">
                   {product.name}
                 </h2>
               </div>
 
               {/* Price */}
-              <div className="py-2.5 border-y border-white/10 flex items-center justify-between">
+              <div className="py-2 sm:py-2.5 border-y border-white/10 flex items-center justify-between">
                 <div>
-                  <span className="text-[9px] sm:text-[10px] font-mono tracking-widest text-zinc-400 uppercase block">
+                  <span className="text-[8.5px] sm:text-[10px] font-mono tracking-widest text-zinc-400 uppercase block">
                     Precio Oficial
                   </span>
-                  <span className="text-2xl sm:text-3xl font-bold font-mono text-white tracking-tight">
+                  <span className="text-xl sm:text-3xl font-bold font-mono text-white tracking-tight">
                     {siteConfig.currency.format(product.price)}
                   </span>
                 </div>
-                <span className="text-xs font-mono text-zinc-300 px-3 py-1 rounded bg-white/5 border border-white/10">
+                <span className="text-[11px] sm:text-xs font-mono text-zinc-300 px-2.5 sm:px-3 py-0.5 sm:py-1 rounded bg-white/5 border border-white/10">
                   {siteConfig.currency.currencyCode}
                 </span>
               </div>
 
               {/* Material & Weight Spec Highlight */}
-              <div className="grid grid-cols-2 gap-3 p-3 sm:p-3.5 rounded-xl bg-white/[0.03] border border-white/10">
+              <div className="grid grid-cols-2 gap-2 sm:gap-3 p-2.5 sm:p-3.5 rounded-xl bg-white/[0.03] border border-white/10">
                 <div>
-                  <span className="text-[9px] sm:text-[10px] font-mono tracking-widest uppercase text-zinc-400 block">
+                  <span className="text-[8.5px] sm:text-[10px] font-mono tracking-widest uppercase text-zinc-400 block">
                     Tela Oficial
                   </span>
                   <span className="text-xs sm:text-sm font-bold text-white uppercase tracking-wider">
@@ -209,7 +209,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
                   </span>
                 </div>
                 <div>
-                  <span className="text-[9px] sm:text-[10px] font-mono tracking-widest uppercase text-zinc-400 block">
+                  <span className="text-[8.5px] sm:text-[10px] font-mono tracking-widest uppercase text-zinc-400 block">
                     Gramaje
                   </span>
                   <span className="text-xs sm:text-sm font-bold text-white font-mono uppercase tracking-wider">
@@ -220,16 +220,16 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
 
               {/* Size Selector */}
               <div>
-                <div className="flex items-center justify-between mb-2">
-                  <label className="text-xs font-bold font-mono tracking-widest uppercase text-zinc-300">
+                <div className="flex items-center justify-between mb-1.5 sm:mb-2">
+                  <label className="text-[11px] sm:text-xs font-bold font-mono tracking-widest uppercase text-zinc-300">
                     Tallas Disponibles:
                   </label>
-                  <span className="text-[11px] font-mono text-zinc-400">
-                    Talla elegida: <strong className="text-white">{selectedSize}</strong>
+                  <span className="text-[10px] sm:text-[11px] font-mono text-zinc-400">
+                    Elegida: <strong className="text-white">{selectedSize}</strong>
                   </span>
                 </div>
 
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1.5 sm:gap-2">
                   {product.sizes.map((size) => {
                     const isSelected = selectedSize === size;
                     return (
@@ -237,7 +237,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
                         key={size}
                         type="button"
                         onClick={() => setSelectedSize(size)}
-                        className={`min-w-[50px] sm:min-w-[54px] py-2.5 px-4 rounded-xl text-xs sm:text-sm font-mono font-bold tracking-wider transition-all duration-150 ${
+                        className={`min-w-[42px] sm:min-w-[54px] py-1.5 sm:py-2.5 px-3 sm:px-4 rounded-lg sm:rounded-xl text-xs sm:text-sm font-mono font-bold tracking-wider transition-all duration-150 ${
                           isSelected
                             ? 'bg-white text-black shadow-lg scale-105'
                             : 'bg-white/5 hover:bg-white/10 text-zinc-300 border border-white/15'
@@ -251,8 +251,8 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
               </div>
 
               {/* Description */}
-              <div className="pt-2">
-                <h4 className="text-[11px] sm:text-xs font-bold font-mono tracking-widest uppercase text-zinc-400 mb-1.5 sm:mb-2">
+              <div className="pt-1 sm:pt-2">
+                <h4 className="text-[10px] sm:text-xs font-bold font-mono tracking-widest uppercase text-zinc-400 mb-1 sm:mb-1.5">
                   Descripción & Confección
                 </h4>
                 <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed font-sans font-light">
@@ -262,10 +262,10 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
 
               {/* Specs / Bullet Points */}
               {product.details && (
-                <div className="space-y-1.5 pt-1">
+                <div className="space-y-1 pt-0.5">
                   {product.details.map((detail, i) => (
-                    <div key={i} className="flex items-center space-x-2 text-xs text-zinc-400 font-sans">
-                      <Check className="w-3.5 h-3.5 text-zinc-400 shrink-0" />
+                    <div key={i} className="flex items-center space-x-1.5 sm:space-x-2 text-[11px] sm:text-xs text-zinc-400 font-sans">
+                      <Check className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-zinc-400 shrink-0" />
                       <span>{detail}</span>
                     </div>
                   ))}
@@ -275,12 +275,12 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
             </div>
 
             {/* ACTION SECTION (WHATSAPP CONVERSION) */}
-            <div className="pt-4 border-t border-white/10 space-y-3">
+            <div className="pt-3 sm:pt-4 border-t border-white/10 space-y-2.5 sm:space-y-3">
               <button
                 onClick={handleWhatsAppClick}
-                className="w-full flex items-center justify-center space-x-2.5 sm:space-x-3 bg-emerald-500 hover:bg-emerald-400 active:scale-98 text-black p-3.5 sm:p-4 rounded-2xl font-extrabold text-xs sm:text-sm uppercase tracking-widest transition-all duration-200 shadow-xl hover:shadow-emerald-500/20"
+                className="w-full flex items-center justify-center space-x-2 sm:space-x-3 bg-emerald-500 hover:bg-emerald-400 active:scale-98 text-black p-3 sm:p-4 rounded-xl sm:rounded-2xl font-extrabold text-xs sm:text-sm uppercase tracking-widest transition-all duration-200 shadow-xl hover:shadow-emerald-500/20"
               >
-                <MessageCircle className="w-5 h-5 fill-black shrink-0" />
+                <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 fill-black shrink-0" />
                 <span>COMPRAR POR WHATSAPP</span>
               </button>
 
