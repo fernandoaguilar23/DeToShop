@@ -68,6 +68,7 @@ export interface Product {
   brand: string;
   modelName: string;
   name: string;
+  colorName?: string;
   subtitle: string;
   price: number;
   category: CategoryId;
@@ -90,27 +91,28 @@ export const products: Product[] = [
   {
     id: "tshirt-balmain-noir",
     brand: "BALMAIN",
-    modelName: "Paris Noir T-Shirt",
-    name: "T-Shirt Balmain Paris Noir",
+    modelName: "BALMAIN PARIS — NEGRA",
+    name: "BALMAIN PARIS — NEGRA",
+    colorName: "Negro",
     subtitle: "Pima Peruana · 175 GSM",
     price: 100000,
     category: "t-shirt",
     status: "available",
-    fabric: "Pima Peruana",
+    fabric: "PIMA PERUANA",
     weight: "175 GSM",
     sizes: ["XL"],
-    description: "Confección exclusiva en Pima Peruana de 175 GSM. Estética sobria y elegante en negro profundo con logotipo Balmain Paris en el pecho.",
+    description: "T-Shirt en Pima Peruana de 175 GSM, en color negro, con diseño tipográfico frontal.\n\nSuavidad, frescura y una caída natural para un look limpio y contemporáneo.",
     details: [
-      "Tela: Pima Peruana de máxima calidad",
-      "Gramaje: 175 GSM",
-      "Talla disponible: XL",
+      "Pima Peruana",
+      "175 GSM",
       "Color: Negro",
-      "Envíos Nacionales e Internacionales"
+      "Talla: XL",
+      "Envíos nacionales e internacionales"
     ],
     images: [
       {
         url: "/fotos-camisas/balmain-negra-xl.jpeg",
-        label: "Vista Editorial Oficial",
+        label: "Vista Editorial",
         isPackaged: false,
       }
     ]
@@ -118,27 +120,28 @@ export const products: Product[] = [
   {
     id: "tshirt-balmain-blanca",
     brand: "BALMAIN",
-    modelName: "Paris Blanca T-Shirt",
-    name: "T-Shirt Balmain Paris Blanca",
+    modelName: "BALMAIN PARIS — BLANCA",
+    name: "BALMAIN PARIS — BLANCA",
+    colorName: "Blanco",
     subtitle: "Pima Peruana · 175 GSM",
     price: 100000,
     category: "t-shirt",
     status: "available",
-    fabric: "Pima Peruana",
+    fabric: "PIMA PERUANA",
     weight: "175 GSM",
     sizes: ["XL", "XXL"],
-    description: "Tejido en Pima Peruana 175 GSM en blanco óptico con tipografía Balmain en arco frontal. Máxima frescura, suavidad y presencia.",
+    description: "T-Shirt en Pima Peruana de 175 GSM, en color blanco, con diseño tipográfico frontal.\n\nSuavidad, frescura y una caída natural para un look limpio y contemporáneo.",
     details: [
-      "Tela: Pima Peruana de máxima calidad",
-      "Gramaje: 175 GSM",
-      "Tallas disponibles: XL, XXL",
+      "Pima Peruana",
+      "175 GSM",
       "Color: Blanco",
-      "Envíos Nacionales e Internacionales"
+      "Tallas: XL, XXL",
+      "Envíos nacionales e internacionales"
     ],
     images: [
       {
         url: "/fotos-camisas/balmain-blanca-xl-xxl.jpeg",
-        label: "Vista Editorial Oficial",
+        label: "Vista Editorial",
         isPackaged: false,
       }
     ]
@@ -146,27 +149,28 @@ export const products: Product[] = [
   {
     id: "tshirt-coach-noir",
     brand: "COACH",
-    modelName: "New York Noir T-Shirt",
-    name: "T-Shirt Coach New York Noir",
+    modelName: "COACH NEW YORK — NEGRA",
+    name: "COACH NEW YORK — NEGRA",
+    colorName: "Negro",
     subtitle: "Pima Peruana · 175 GSM",
     price: 100000,
     category: "t-shirt",
     status: "available",
-    fabric: "Pima Peruana",
+    fabric: "PIMA PERUANA",
     weight: "175 GSM",
     sizes: ["XXL"],
-    description: "Negro puro con apliques monogram Coach en hombros y placa de cuero distintiva en el lateral. Confección premium en Pima Peruana 175 GSM.",
+    description: "T-Shirt en Pima Peruana de 175 GSM, en color negro, con apliques monogram en hombros.\n\nSuavidad, frescura y una caída natural para un look limpio y contemporáneo.",
     details: [
-      "Tela: Pima Peruana de máxima calidad",
-      "Gramaje: 175 GSM",
-      "Talla disponible: XXL",
-      "Detalle: Apliques monogram en hombros",
-      "Envíos Nacionales e Internacionales"
+      "Pima Peruana",
+      "175 GSM",
+      "Color: Negro",
+      "Talla: XXL",
+      "Envíos nacionales e internacionales"
     ],
     images: [
       {
         url: "/fotos-camisas/coach-negra-xxl.jpeg",
-        label: "Vista Editorial Oficial",
+        label: "Vista Editorial",
         isPackaged: false,
       }
     ]
@@ -174,27 +178,28 @@ export const products: Product[] = [
   {
     id: "tshirt-coach-blanca",
     brand: "COACH",
-    modelName: "New York Blanca T-Shirt",
-    name: "T-Shirt Coach New York Blanca",
-    subtitle: "Pima Peruana · 175 GSM · Empaque Oficial",
+    modelName: "COACH NEW YORK — BLANCA",
+    name: "COACH NEW YORK — BLANCA",
+    colorName: "Blanco",
+    subtitle: "Pima Peruana · 175 GSM",
     price: 100000,
     category: "t-shirt",
     status: "available",
-    fabric: "Pima Peruana",
+    fabric: "PIMA PERUANA",
     weight: "175 GSM",
     sizes: ["L"],
-    description: "Diseño distintivo con el carruaje y caballo Coach New York y acentos monogram en hombros. Presentación en empaque oficial sellado listo para despacho.",
+    description: "T-Shirt en Pima Peruana de 175 GSM, en color blanco, con diseño gráfico frontal.\n\nSuavidad, frescura y una caída natural para un look limpio y contemporáneo.",
     details: [
-      "Tela: Pima Peruana de máxima calidad",
-      "Gramaje: 175 GSM",
-      "Talla disponible: L",
-      "Presentación en empaque sellado de fábrica",
-      "Envíos Nacionales e Internacionales"
+      "Pima Peruana",
+      "175 GSM",
+      "Color: Blanco",
+      "Talla: L",
+      "Envíos nacionales e internacionales"
     ],
     images: [
       {
         url: "/fotos-camisas/coach-blanca-l.jpeg",
-        label: "Presentación en Empaque Oficial",
+        label: "Presentación en Empaque Sellado",
         isPackaged: true,
       }
     ]
@@ -202,139 +207,144 @@ export const products: Product[] = [
   {
     id: "tshirt-dg-blanca",
     brand: "DOLCE & GABBANA",
-    modelName: "Crest Blanca T-Shirt",
-    name: "T-Shirt Dolce & Gabbana Crest Blanca",
+    modelName: "DOLCE & GABBANA — BLANCA",
+    name: "DOLCE & GABBANA — BLANCA",
+    colorName: "Blanco",
     subtitle: "Pima Peruana · 175 GSM",
     price: 100000,
     category: "t-shirt",
     status: "available",
-    fabric: "Pima Peruana",
+    fabric: "PIMA PERUANA",
     weight: "175 GSM",
     sizes: ["XL"],
-    description: "Blanco óptico en Pima Peruana 175 GSM con bordado insignia de corona y escudo Dolce & Gabbana en el pecho. Estilo editorial de lujo contemporáneo.",
+    description: "T-Shirt en Pima Peruana de 175 GSM, en color blanco, con bordado insignia frontal.\n\nSuavidad, frescura y una caída natural para un look limpio y contemporáneo.",
     details: [
-      "Tela: Pima Peruana de máxima calidad",
-      "Gramaje: 175 GSM",
-      "Talla disponible: XL",
-      "Bordado de escudo con corona en relieve",
-      "Envíos Nacionales e Internacionales"
+      "Pima Peruana",
+      "175 GSM",
+      "Color: Blanco",
+      "Talla: XL",
+      "Envíos nacionales e internacionales"
     ],
     images: [
       {
         url: "/fotos-camisas/dolce-gabbana-blanca-xl.jpeg",
-        label: "Vista Editorial Oficial",
+        label: "Vista Editorial",
         isPackaged: false,
       }
     ]
   },
   {
     id: "tshirt-boss-embossed-noir",
-    brand: "BOSS",
-    modelName: "Embossed Noir T-Shirt",
-    name: "T-Shirt Boss Embossed Noir",
+    brand: "HUGO BOSS",
+    modelName: "HUGO BOSS — NEGRA",
+    name: "HUGO BOSS — NEGRA",
+    colorName: "Negro",
     subtitle: "Pima Peruana · 175 GSM",
     price: 100000,
     category: "t-shirt",
     status: "available",
-    fabric: "Pima Peruana",
+    fabric: "PIMA PERUANA",
     weight: "175 GSM",
     sizes: ["XL"],
-    description: "Elegancia monocromática en negro absoluto. Letras BOSS en relieve texturizado tonal sobre Pima Peruana de 175 GSM.",
+    description: "T-Shirt en Pima Peruana de 175 GSM, en color negro, con diseño en relieve tonal.\n\nSuavidad, frescura y una caída natural para un look limpio y contemporáneo.",
     details: [
-      "Tela: Pima Peruana de máxima calidad",
-      "Gramaje: 175 GSM",
-      "Talla disponible: XL",
-      "Letras BOSS en relieve tonal",
-      "Envíos Nacionales e Internacionales"
+      "Pima Peruana",
+      "175 GSM",
+      "Color: Negro",
+      "Talla: XL",
+      "Envíos nacionales e internacionales"
     ],
     images: [
       {
         url: "/fotos-camisas/hugo-boss-embossed-negra-xl.jpeg",
-        label: "Vista Editorial Oficial",
+        label: "Vista Editorial",
         isPackaged: false,
       }
     ]
   },
   {
     id: "tshirt-boss-embossed-blanca",
-    brand: "BOSS",
-    modelName: "Embossed Blanca T-Shirt",
-    name: "T-Shirt Boss Embossed Blanca",
+    brand: "HUGO BOSS",
+    modelName: "HUGO BOSS — BLANCA",
+    name: "HUGO BOSS — BLANCA",
+    colorName: "Blanco",
     subtitle: "Pima Peruana · 175 GSM",
     price: 100000,
     category: "t-shirt",
     status: "available",
-    fabric: "Pima Peruana",
+    fabric: "PIMA PERUANA",
     weight: "175 GSM",
     sizes: ["XL", "XXL"],
-    description: "Blanco refinado con relieve tonal BOSS en el pecho. Fibra de Pima Peruana 175 GSM de máxima durabilidad y suavidad al tacto.",
+    description: "T-Shirt en Pima Peruana de 175 GSM, en color blanco, con diseño en relieve tonal.\n\nSuavidad, frescura y una caída natural para un look limpio y contemporáneo.",
     details: [
-      "Tela: Pima Peruana de máxima calidad",
-      "Gramaje: 175 GSM",
-      "Tallas disponibles: XL, XXL",
-      "Relieve tonal BOSS",
-      "Envíos Nacionales e Internacionales"
+      "Pima Peruana",
+      "175 GSM",
+      "Color: Blanco",
+      "Tallas: XL, XXL",
+      "Envíos nacionales e internacionales"
     ],
     images: [
       {
         url: "/fotos-camisas/hugo-boss-embossed-blanca-xl-xxl.jpeg",
-        label: "Vista Editorial Oficial",
+        label: "Vista Editorial",
         isPackaged: false,
       }
     ]
   },
   {
     id: "tshirt-boss-circle-blanca",
-    brand: "BOSS",
-    modelName: "Monogram Circle Blanca T-Shirt",
-    name: "T-Shirt Boss Monogram Circle Blanca",
+    brand: "HUGO BOSS",
+    modelName: "HUGO BOSS CIRCLE — BLANCA",
+    name: "HUGO BOSS CIRCLE — BLANCA",
+    colorName: "Blanco",
     subtitle: "Pima Peruana · 175 GSM",
     price: 100000,
     category: "t-shirt",
     status: "available",
-    fabric: "Pima Peruana",
+    fabric: "PIMA PERUANA",
     weight: "175 GSM",
     sizes: ["XL"],
-    description: "Blanco puro con logotipo circular minimalista HB en el centro del pecho. Líneas sobrias y corte limpio en Pima Peruana 175 GSM.",
+    description: "T-Shirt en Pima Peruana de 175 GSM, en color blanco, con emblema circular en el pecho.\n\nSuavidad, frescura y una caída natural para un look limpio y contemporáneo.",
     details: [
-      "Tela: Pima Peruana de máxima calidad",
-      "Gramaje: 175 GSM",
-      "Talla disponible: XL",
-      "Emblema circular minimalista en relieve",
-      "Envíos Nacionales e Internacionales"
+      "Pima Peruana",
+      "175 GSM",
+      "Color: Blanco",
+      "Talla: XL",
+      "Envíos nacionales e internacionales"
     ],
     images: [
       {
         url: "/fotos-camisas/hugo-boss-circle-blanca-xl.jpeg",
-        label: "Vista Editorial Oficial",
+        label: "Vista Editorial",
         isPackaged: false,
       }
     ]
   },
   {
     id: "tshirt-hugo-bubble-noir",
-    brand: "HUGO",
-    modelName: "Bubble Graffiti Noir T-Shirt",
-    name: "T-Shirt Hugo Bubble Graffiti Noir",
-    subtitle: "Pima Peruana · 175 GSM · Fit Relajado",
+    brand: "HUGO BOSS",
+    modelName: "HUGO BUBBLE — NEGRA",
+    name: "HUGO BUBBLE — NEGRA",
+    colorName: "Negro",
+    subtitle: "Pima Peruana · 175 GSM",
     price: 100000,
     category: "t-shirt",
     status: "available",
-    fabric: "Pima Peruana",
+    fabric: "PIMA PERUANA",
     weight: "175 GSM",
     sizes: ["L"],
-    description: "Estilo urbano streetwear de alto impacto. Letras HUGO en tipografía bubble con contorno beige texturizado sobre Pima Peruana de 175 GSM.",
+    description: "T-Shirt en Pima Peruana de 175 GSM, en color negro, con diseño tipográfico bubble frontal.\n\nSuavidad, frescura y una caída natural para un look limpio y contemporáneo.",
     details: [
-      "Tela: Pima Peruana de máxima calidad",
-      "Gramaje: 175 GSM",
-      "Talla disponible: L",
-      "Estilo streetwear gráfico contemporáneo",
-      "Envíos Nacionales e Internacionales"
+      "Pima Peruana",
+      "175 GSM",
+      "Color: Negro",
+      "Talla: L",
+      "Envíos nacionales e internacionales"
     ],
     images: [
       {
         url: "/fotos-camisas/hugo-boss-bubble-negra-l.jpeg",
-        label: "Vista Editorial Oficial",
+        label: "Vista Editorial",
         isPackaged: false,
       }
     ]

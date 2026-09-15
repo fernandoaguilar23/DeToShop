@@ -54,14 +54,9 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onOpenModal }
       {/* Product Information Body */}
       <div className="p-2.5 xs:p-3 sm:p-5 flex flex-col flex-grow justify-between bg-brand-card/40">
         <div>
-          {/* [MARCA] */}
-          <span className="text-[9px] xs:text-[10px] sm:text-xs font-mono font-bold tracking-widest uppercase text-emerald-400 block mb-1">
-            {product.brand}
-          </span>
-
-          {/* Product Name / Model - FULL name, NO truncation */}
+          {/* Product Name (Full unified nomenclature in WHITE) */}
           <h3 className="text-xs sm:text-sm md:text-base font-bold text-white tracking-wide uppercase group-hover:text-zinc-200 transition-colors leading-snug break-words">
-            {product.modelName}
+            {product.name}
           </h3>
 
           {/* PIMA PERUANA · 175 GSM */}

@@ -38,8 +38,8 @@ export const siteConfig = {
   whatsappMessages: {
     // Mensaje para compra de T-Shirt específica con talla
     productInquiry: (productName: string, size?: string) => {
-      let msg = `Quiero realizar la compra de mi T-shirt: ${productName}`;
-      if (size) msg += `, talla ${size}`;
+      let msg = `Hola, De To’ Shop. Quiero consultar disponibilidad para comprar: ${productName}`;
+      if (size) msg += `, en talla ${size}`;
       return encodeURIComponent(msg);
     },
     

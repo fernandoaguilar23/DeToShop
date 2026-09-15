@@ -86,10 +86,10 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
           <div className="absolute bottom-3.5 left-3.5 right-3.5 text-left flex items-end justify-between pointer-events-none">
             <div className="truncate pr-2">
               <span className="text-[9px] sm:text-[10px] font-mono uppercase tracking-widest text-emerald-400 block font-bold">
-                DROP 01 // DISPONIBLE
+                DROP 01 · DISPONIBLE
               </span>
               <h3 className="text-xs sm:text-sm font-bold text-white tracking-wider uppercase truncate">
-                T-SHIRT BALMAIN PARIS NOIR
+                BALMAIN PARIS — NEGRA
               </h3>
             </div>
             <span className="text-[10px] sm:text-[11px] font-mono text-zinc-200 border border-white/20 bg-black/60 px-2 py-0.5 rounded backdrop-blur-sm shrink-0">

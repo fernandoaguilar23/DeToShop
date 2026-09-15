@@ -77,32 +77,32 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
 
       {/* Modal Container */}
       <div 
-        className="relative z-10 w-full max-w-3xl max-h-[90vh] sm:max-h-[85vh] bg-brand-void sm:bg-brand-card border-t sm:border border-white/10 rounded-t-2xl sm:rounded-3xl shadow-2xl flex flex-col overflow-hidden animate-slide-up"
+        className="relative z-10 w-full max-w-3xl max-h-[92vh] sm:max-h-[90vh] bg-brand-void sm:bg-brand-card border-t sm:border border-white/10 rounded-t-2xl sm:rounded-3xl shadow-2xl flex flex-col overflow-hidden animate-slide-up"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header bar on modal */}
-        <div className="flex items-center justify-between px-3.5 sm:px-6 py-2.5 sm:py-3.5 border-b border-white/10 bg-brand-void/95 sticky top-0 z-30 backdrop-blur-md">
+        <div className="flex items-center justify-between px-3.5 sm:px-6 py-2.5 sm:py-3 border-b border-white/10 bg-brand-void/95 sticky top-0 z-30 backdrop-blur-md">
           <div className="flex items-center space-x-2 truncate pr-2">
             <span className="text-xs font-bold font-display tracking-widest text-white uppercase shrink-0">
               {siteConfig.brandName}
             </span>
             <span className="text-zinc-600">/</span>
             <span className="text-[10px] sm:text-[11px] font-mono text-zinc-400 uppercase truncate">
-              T-SHIRT · DROP 01
+              DROP 01 · DISPONIBLE
             </span>
           </div>
 
           <div className="flex items-center space-x-1.5 sm:space-x-2 shrink-0">
             <button
               onClick={handleShare}
-              className="p-1.5 sm:p-2.5 rounded-full bg-white/5 hover:bg-white/10 text-zinc-300 hover:text-white transition-colors"
+              className="p-1.5 sm:p-2 rounded-full bg-white/5 hover:bg-white/10 text-zinc-300 hover:text-white transition-colors"
               title="Compartir enlace de prenda"
             >
               <Share2 className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             </button>
             <button
               onClick={onClose}
-              className="p-1.5 sm:p-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
+              className="p-1.5 sm:p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
               title="Cerrar vista"
             >
               <X className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -111,7 +111,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
         </div>
 
         {/* Modal Scrollable Body */}
-        <div className="overflow-y-auto p-3.5 sm:p-6 md:p-8 space-y-4 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-6 md:gap-8 no-scrollbar pb-6 sm:pb-8">
+        <div className="overflow-y-auto p-3.5 sm:p-5 md:p-6 space-y-4 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-5 md:gap-6 no-scrollbar pb-5 sm:pb-6">
           
           {/* LEFT: GALLERY SECTION */}
           <div className="flex flex-col space-y-2.5 sm:space-y-3">
@@ -135,7 +135,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
               {activeImage?.isPackaged && (
                 <div className="absolute bottom-2 left-2 sm:bottom-3 sm:left-3 inline-flex items-center space-x-1 sm:space-x-1.5 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md sm:rounded-lg bg-black/80 text-[8.5px] sm:text-[10px] font-mono text-zinc-300 border border-white/15 backdrop-blur-sm">
                   <Package className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-zinc-400" />
-                  <span>EMPAQUE OFICIAL</span>
+                  <span>EMPAQUE SELLADO</span>
                 </div>
               )}
             </div>
@@ -170,53 +170,47 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
           </div>
 
           {/* RIGHT: DETAILS & WHATSAPP ACTION */}
-          <div className="flex flex-col justify-between space-y-4 sm:space-y-6">
+          <div className="flex flex-col justify-between space-y-4 sm:space-y-5">
             <div className="space-y-3 sm:space-y-4">
               
-              {/* Product Subtitle & Name */}
+              {/* Product Name & Availability */}
               <div>
-                <div className="flex items-center space-x-2 mb-1">
-                  <span className="text-[10px] sm:text-xs font-mono font-bold tracking-widest uppercase text-emerald-400">
-                    {product.brand}
-                  </span>
-                  <span className="text-zinc-600">·</span>
-                  <span className="text-[10px] sm:text-xs font-mono tracking-widest uppercase text-zinc-400">
-                    DROP 01 DISPONIBLE
+                <h2 className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-bold font-sans tracking-wide text-white uppercase leading-snug">
+                  {product.name}
+                </h2>
+                <div className="flex items-center space-x-2 mt-2">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_8px_rgba(52,211,153,0.8)]" />
+                  <span className="text-[11px] sm:text-xs font-mono font-bold tracking-widest uppercase text-emerald-400">
+                    DROP 01 · DISPONIBLE
                   </span>
                 </div>
-                <h2 className="text-base xs:text-lg sm:text-2xl md:text-3xl font-bold font-sans tracking-wide text-white uppercase leading-snug">
-                  {product.modelName || product.name}
-                </h2>
               </div>
 
               {/* Price */}
-              <div className="py-2 sm:py-2.5 border-y border-white/10 flex items-center justify-between">
+              <div className="py-2.5 sm:py-3 border-y border-white/10 flex items-center justify-between">
                 <div>
-                  <span className="text-[8.5px] sm:text-[10px] font-mono tracking-widest text-zinc-400 uppercase block">
-                    Precio Oficial
+                  <span className="text-[9px] sm:text-[10px] font-mono tracking-widest text-zinc-400 uppercase block mb-0.5">
+                    PRECIO
                   </span>
-                  <span className="text-xl sm:text-3xl font-bold font-mono text-white tracking-tight">
-                    {siteConfig.currency.format(product.price)}
+                  <span className="text-2xl sm:text-3xl font-bold font-mono text-white tracking-tight">
+                    {siteConfig.currency.format(product.price)} COP
                   </span>
                 </div>
-                <span className="text-[11px] sm:text-xs font-mono text-zinc-300 px-2.5 sm:px-3 py-0.5 sm:py-1 rounded bg-white/5 border border-white/10">
-                  {siteConfig.currency.currencyCode}
-                </span>
               </div>
 
-              {/* Material & Weight Spec Highlight */}
-              <div className="grid grid-cols-2 gap-2 sm:gap-3 p-2.5 sm:p-3.5 rounded-xl bg-white/[0.03] border border-white/10">
+              {/* Material & Gramaje */}
+              <div className="grid grid-cols-2 gap-2.5 sm:gap-3.5 p-3 sm:p-4 rounded-xl bg-white/[0.03] border border-white/10">
                 <div>
-                  <span className="text-[8.5px] sm:text-[10px] font-mono tracking-widest uppercase text-zinc-400 block">
-                    Tela Oficial
+                  <span className="text-[9px] sm:text-[10px] font-mono tracking-widest uppercase text-zinc-400 block mb-0.5">
+                    MATERIAL
                   </span>
-                  <span className="text-xs sm:text-sm font-bold text-white uppercase tracking-wider">
+                  <span className="text-xs sm:text-sm font-bold text-white uppercase tracking-wider font-mono">
                     {product.fabric}
                   </span>
                 </div>
                 <div>
-                  <span className="text-[8.5px] sm:text-[10px] font-mono tracking-widest uppercase text-zinc-400 block">
-                    Gramaje
+                  <span className="text-[9px] sm:text-[10px] font-mono tracking-widest uppercase text-zinc-400 block mb-0.5">
+                    GRAMAJE
                   </span>
                   <span className="text-xs sm:text-sm font-bold text-white font-mono uppercase tracking-wider">
                     {product.weight}
@@ -226,16 +220,16 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
 
               {/* Size Selector */}
               <div>
-                <div className="flex items-center justify-between mb-1.5 sm:mb-2">
+                <div className="flex items-center justify-between mb-2">
                   <label className="text-[11px] sm:text-xs font-bold font-mono tracking-widest uppercase text-zinc-300">
-                    Tallas Disponibles:
+                    TALLAS DISPONIBLES
                   </label>
-                  <span className="text-[10px] sm:text-[11px] font-mono text-zinc-400">
-                    Elegida: <strong className="text-white">{selectedSize}</strong>
+                  <span className="text-[10px] sm:text-[11px] font-mono text-zinc-400 uppercase">
+                    ELEGIDA: <strong className="text-white font-bold">{selectedSize}</strong>
                   </span>
                 </div>
 
-                <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                <div className="flex flex-wrap gap-2">
                   {product.sizes.map((size) => {
                     const isSelected = selectedSize === size;
                     return (
@@ -243,9 +237,9 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
                         key={size}
                         type="button"
                         onClick={() => setSelectedSize(size)}
-                        className={`min-w-[42px] sm:min-w-[54px] py-1.5 sm:py-2.5 px-3 sm:px-4 rounded-lg sm:rounded-xl text-xs sm:text-sm font-mono font-bold tracking-wider transition-all duration-150 ${
+                        className={`min-w-[48px] sm:min-w-[56px] py-2 px-3.5 rounded-xl text-xs sm:text-sm font-mono font-bold tracking-wider transition-all duration-150 ${
                           isSelected
-                            ? 'bg-white text-black shadow-lg scale-105'
+                            ? 'bg-white text-black shadow-lg scale-105 border-2 border-emerald-400'
                             : 'bg-white/5 hover:bg-white/10 text-zinc-300 border border-white/15'
                         }`}
                       >
@@ -257,55 +251,47 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
               </div>
 
               {/* Description */}
-              <div className="pt-1 sm:pt-2">
-                <h4 className="text-[10px] sm:text-xs font-bold font-mono tracking-widest uppercase text-zinc-400 mb-1 sm:mb-1.5">
-                  Descripción & Confección
+              <div className="pt-1 sm:pt-2 border-t border-white/10">
+                <h4 className="text-[10px] sm:text-xs font-bold font-mono tracking-widest uppercase text-zinc-400 mb-1.5">
+                  DESCRIPCIÓN
                 </h4>
-                <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed font-sans font-light">
-                  {product.description.split('. ').map((part, i, arr) => (
-                    <span key={i} className={i > 0 ? "block mt-1" : ""}>
-                      {part}{i < arr.length - 1 ? '.' : ''}
-                    </span>
+                <div className="text-xs sm:text-sm text-zinc-300 leading-relaxed font-sans font-light space-y-2">
+                  {product.description.split('\n\n').map((paragraph, i) => (
+                    <p key={i}>
+                      {paragraph}
+                    </p>
                   ))}
-                </p>
+                </div>
               </div>
 
-              {/* Specs / Bullet Points */}
+              {/* Details */}
               {product.details && (
-                <div className="space-y-1 pt-0.5">
-                  {product.details.map((detail, i) => (
-                    <div key={i} className="flex items-center space-x-1.5 sm:space-x-2 text-[11px] sm:text-xs text-zinc-400 font-sans">
-                      <Check className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-zinc-400 shrink-0" />
-                      <span>{detail}</span>
-                    </div>
-                  ))}
+                <div className="pt-2 border-t border-white/10">
+                  <h4 className="text-[10px] sm:text-xs font-bold font-mono tracking-widest uppercase text-zinc-400 mb-2">
+                    DETALLES
+                  </h4>
+                  <div className="space-y-1.5">
+                    {product.details.map((detail, i) => (
+                      <div key={i} className="flex items-center space-x-2 text-xs text-zinc-300 font-sans">
+                        <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                        <span>{detail}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               )}
 
             </div>
 
             {/* ACTION SECTION (WHATSAPP CONVERSION) */}
-            <div className="pt-3 sm:pt-4 border-t border-white/10 space-y-2.5 sm:space-y-3">
+            <div className="pt-4 border-t border-white/10">
               <button
                 onClick={handleWhatsAppClick}
-                className="w-full flex items-center justify-center space-x-2 sm:space-x-3 bg-emerald-500 hover:bg-emerald-400 active:scale-98 text-black p-3 sm:p-4 rounded-xl sm:rounded-2xl font-extrabold text-xs sm:text-sm uppercase tracking-widest transition-all duration-200 shadow-xl hover:shadow-emerald-500/20"
+                className="w-full flex items-center justify-center space-x-2 sm:space-x-3 bg-emerald-500 hover:bg-emerald-400 active:scale-98 text-black py-3.5 sm:py-4 px-6 rounded-xl sm:rounded-2xl font-extrabold text-xs sm:text-sm uppercase tracking-widest transition-all duration-200 shadow-xl hover:shadow-emerald-500/20"
               >
                 <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 fill-black shrink-0" />
-                <span>COMPRAR POR WHATSAPP</span>
+                <span>CONSULTAR POR WHATSAPP →</span>
               </button>
-
-              {/* Guarantees & Shipping Notice */}
-              <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-[9px] sm:text-[10px] font-mono text-zinc-400 tracking-wider uppercase text-center">
-                <span className="flex items-center space-x-1 text-zinc-300">
-                  <Globe className="w-3 h-3 text-zinc-400 shrink-0" />
-                  <span>Envíos Nacionales e Internacionales</span>
-                </span>
-                <span className="hidden xs:inline">·</span>
-                <span className="flex items-center space-x-1">
-                  <ShieldCheck className="w-3 h-3 text-zinc-400 shrink-0" />
-                  <span>Compra Segura</span>
-                </span>
-              </div>
             </div>
 
           </div>
