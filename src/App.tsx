@@ -13,7 +13,7 @@ import { WhatsAppCTA } from './components/WhatsAppCTA';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 import { Footer } from './components/Footer';
 import { products, Product, CATEGORIES, CategoryId } from './data/products';
-import { Ferrofluid } from './components/Ferrofluid';
+import Beams from './components/Beams';
 import { WarpText } from './components/WarpText';
 
 export const App: React.FC = () => {
@@ -39,23 +39,19 @@ export const App: React.FC = () => {
 
   return (
     <div className="relative min-h-screen bg-transparent text-brand-light flex flex-col selection:bg-white selection:text-black overflow-x-hidden">
-      {/* Interactive Liquid Ferrofluid Background */}
+      {/* Dynamic 3D Beams Background */}
       <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-        <Ferrofluid
-          colors={["#ffffff", "#ffffff", "#ffffff"]}
-          speed={0.5}
-          scale={1.6}
-          turbulence={1}
-          fluidity={0.1}
-          rimWidth={0.2}
-          sharpness={2.5}
-          shimmer={1.5}
-          glow={2}
-          flowDirection="down"
-          opacity={1}
-          mouseInteraction
-          mouseStrength={1}
-          mouseRadius={0.35}
+        <Beams
+          beamWidth={3}
+          beamHeight={30}
+          beamNumber={20}
+          lightColor="#ffffff"
+          speed={2}
+          noiseIntensity={1.75}
+          scale={0.2}
+          rotation={30}
+          beamColor="#000000"
+          backgroundColor="#000000"
         />
       </div>
 
