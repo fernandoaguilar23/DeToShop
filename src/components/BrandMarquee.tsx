@@ -13,19 +13,9 @@ const brandLogos: LogoItem[] = [
     title: 'Coach New York',
   },
   {
-    src: '/brands/boss.svg',
-    alt: 'Boss Hugo Boss',
-    title: 'Boss Hugo Boss',
-  },
-  {
     src: '/brands/dg.svg',
     alt: 'Dolce & Gabbana',
     title: 'Dolce & Gabbana',
-  },
-  {
-    src: '/brands/hugo.svg',
-    alt: 'Hugo',
-    title: 'Hugo',
   },
   {
     src: '/brands/hugo-boss.svg',
