@@ -15,6 +15,7 @@ import { Footer } from './components/Footer';
 import { products, Product, CATEGORIES, CategoryId } from './data/products';
 import Beams from './components/Beams';
 import { WarpText } from './components/WarpText';
+import { BrandMarquee } from './components/BrandMarquee';
 
 export const App: React.FC = () => {
   // Category state defaults to the available category: 't-shirt'
@@ -64,6 +65,9 @@ export const App: React.FC = () => {
       <div className="relative z-10">
         <Hero onExploreClick={scrollToCollection} />
       </div>
+
+      {/* BRAND LOGOS SLIDER (React Bits LogoLoop) */}
+      <BrandMarquee />
 
       {/* 02 — DROP 01 / THE COLLECTION (Catálogo) */}
       <section
