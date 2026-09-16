@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 70" fill="#ffffff">
+  <g transform="translate(15, 6) scale(0.6)">
+    <!-- Bunny skull and crossbones -->
+    <ellipse cx="40" cy="55" rx="22" ry="18" fill="#ffffff"/>
+    <path d="M28 42 C20 15, 22 0, 27 0 C32 0, 38 15, 34 42 Z" fill="#ffffff"/>
+    <path d="M52 42 C60 15, 58 0, 53 0 C48 0, 42 15, 46 42 Z" fill="#ffffff"/>
+    <ellipse cx="32" cy="54" rx="4" ry="6" fill="#09090b"/>
+    <ellipse cx="48" cy="54" rx="4" ry="6" fill="#09090b"/>
+    <polygon points="40,60 37,64 43,64" fill="#09090b"/>
+    <!-- Crossbones -->
+    <path d="M12 76 L68 96 M68 76 L12 96" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <text x="250" y="47" font-family="'Space Grotesk', 'Arial Black', sans-serif" font-weight="900" font-size="30" letter-spacing="4" text-anchor="middle">PSYCHO BUNNY</text>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 70" fill="#ffffff">
+      <circle cx="35" cy="35" r="20" stroke="#ffffff" stroke-width="4" fill="none"/>
+      <circle cx="27" cy="30" r="3" fill="#ffffff"/>
+      <circle cx="35" cy="24" r="3" fill="#ffffff"/>
+      <circle cx="43" cy="30" r="3" fill="#ffffff"/>
+      <path d="M26 42 Q35 49 44 42" stroke="#ffffff" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+      <text x="180" y="48" font-family="'Space Grotesk', 'Arial Black', sans-serif" font-weight="900" font-size="34" letter-spacing="7" text-anchor="middle">BARROW</text>
+    </svg>

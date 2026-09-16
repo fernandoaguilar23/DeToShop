@@ -8,9 +8,24 @@ const brandLogos: LogoItem[] = [
     title: 'Balmain Paris',
   },
   {
-    src: '/brands/coach.svg',
-    alt: 'Coach New York',
-    title: 'Coach New York',
+    src: '/brands/louis-vuitton.svg',
+    alt: 'Louis Vuitton',
+    title: 'Louis Vuitton',
+  },
+  {
+    src: '/brands/dior.svg',
+    alt: 'Dior',
+    title: 'Dior',
+  },
+  {
+    src: '/brands/prada.svg',
+    alt: 'Prada',
+    title: 'Prada',
+  },
+  {
+    src: '/brands/balenciaga.svg',
+    alt: 'Balenciaga',
+    title: 'Balenciaga',
   },
   {
     src: '/brands/dg.svg',
@@ -18,9 +33,109 @@ const brandLogos: LogoItem[] = [
     title: 'Dolce & Gabbana',
   },
   {
+    src: '/brands/versace.svg',
+    alt: 'Versace',
+    title: 'Versace',
+  },
+  {
+    src: '/brands/burberry.svg',
+    alt: 'Burberry',
+    title: 'Burberry',
+  },
+  {
+    src: '/brands/valentino.svg',
+    alt: 'Valentino',
+    title: 'Valentino',
+  },
+  {
+    src: '/brands/ferragamo.svg',
+    alt: 'Salvatore Ferragamo',
+    title: 'Salvatore Ferragamo',
+  },
+  {
+    src: '/brands/coach.svg',
+    alt: 'Coach New York',
+    title: 'Coach New York',
+  },
+  {
     src: '/brands/hugo-boss.svg',
     alt: 'Hugo Boss',
     title: 'Hugo Boss',
+  },
+  {
+    src: '/brands/armani-exchange.svg',
+    alt: 'Armani Exchange',
+    title: 'Armani Exchange',
+  },
+  {
+    src: '/brands/ralph-lauren.svg',
+    alt: 'Ralph Lauren',
+    title: 'Ralph Lauren',
+  },
+  {
+    src: '/brands/tommy-hilfiger.svg',
+    alt: 'Tommy Hilfiger',
+    title: 'Tommy Hilfiger',
+  },
+  {
+    src: '/brands/amiri.svg',
+    alt: 'Amiri',
+    title: 'Amiri',
+  },
+  {
+    src: '/brands/off-white.svg',
+    alt: 'Off-White',
+    title: 'Off-White',
+  },
+  {
+    src: '/brands/rhude.svg',
+    alt: 'Rhude',
+    title: 'Rhude',
+  },
+  {
+    src: '/brands/casablanca.svg',
+    alt: 'Casablanca Paris',
+    title: 'Casablanca Paris',
+  },
+  {
+    src: '/brands/represent.svg',
+    alt: 'Represent',
+    title: 'Represent',
+  },
+  {
+    src: '/brands/essentials.svg',
+    alt: 'Fear of God Essentials',
+    title: 'Essentials',
+  },
+  {
+    src: '/brands/dsquared2.svg',
+    alt: 'Dsquared2',
+    title: 'Dsquared2',
+  },
+  {
+    src: '/brands/psycho-bunny.svg',
+    alt: 'Psycho Bunny',
+    title: 'Psycho Bunny',
+  },
+  {
+    src: '/brands/barrow.svg',
+    alt: 'Barrow',
+    title: 'Barrow',
+  },
+  {
+    src: '/brands/nike.svg',
+    alt: 'Nike',
+    title: 'Nike',
+  },
+  {
+    src: '/brands/jordan.svg',
+    alt: 'Jordan',
+    title: 'Jordan',
+  },
+  {
+    src: '/brands/adidas.svg',
+    alt: 'Adidas',
+    title: 'Adidas',
   },
   {
     src: '/logos/horizontal-blanco.png',
