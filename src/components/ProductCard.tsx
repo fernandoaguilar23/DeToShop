@@ -18,10 +18,17 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onOpenModal }
       <div className="absolute top-2 left-2 right-2 sm:top-3 sm:left-3 sm:right-3 z-20 flex items-center justify-between pointer-events-none">
         {/* Availability Badge */}
         <div>
-          <span className="inline-flex items-center space-x-1 sm:space-x-1.5 px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-full text-[8px] sm:text-[10px] font-bold font-mono tracking-widest uppercase bg-neutral-900/90 text-emerald-300 border border-emerald-500/30 backdrop-blur-md shadow-sm">
-            <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            <span>DISPONIBLE</span>
-          </span>
+          {product.status === 'sold_out' ? (
+            <span className="inline-flex items-center space-x-1 sm:space-x-1.5 px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-full text-[8px] sm:text-[10px] font-bold font-mono tracking-widest uppercase bg-neutral-900/90 text-zinc-400 border border-white/15 backdrop-blur-md shadow-sm">
+              <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-zinc-500" />
+              <span>VENDIDA</span>
+            </span>
+          ) : (
+            <span className="inline-flex items-center space-x-1 sm:space-x-1.5 px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-full text-[8px] sm:text-[10px] font-bold font-mono tracking-widest uppercase bg-neutral-900/90 text-emerald-300 border border-emerald-500/30 backdrop-blur-md shadow-sm">
+              <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              <span>DISPONIBLE</span>
+            </span>
+          )}
         </div>
 
         {/* Fabric specification badge */}
@@ -41,6 +48,15 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onOpenModal }
 
         {/* Ambient Dark Gradient on bottom of image */}
         <div className="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-transparent to-transparent opacity-60" />
+
+        {/* Sold out watermark overlay */}
+        {product.status === 'sold_out' && (
+          <div className="absolute inset-0 bg-black/40 flex items-center justify-center pointer-events-none">
+            <span className="px-2.5 sm:px-3.5 py-1 rounded-full bg-black/80 border border-white/20 text-zinc-300 text-[9px] sm:text-xs font-mono font-bold tracking-widest uppercase backdrop-blur-sm shadow-xl">
+              VENDIDA
+            </span>
+          </div>
+        )}
 
         {/* Hover Quick Action Indicator (Desktop) */}
         <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden sm:flex items-center justify-center">
@@ -75,7 +91,11 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onOpenModal }
               {product.sizes.map((sz) => (
                 <span
                   key={sz}
-                  className="px-1 sm:px-1.5 py-0.5 rounded text-[8px] sm:text-[9px] font-mono text-zinc-300 bg-white/5 border border-white/10"
+                  className={`px-1 sm:px-1.5 py-0.5 rounded text-[8px] sm:text-[9px] font-mono border ${
+                    product.status === 'sold_out'
+                      ? 'text-zinc-500 bg-white/[0.02] border-white/5 line-through'
+                      : 'text-zinc-300 bg-white/5 border-white/10'
+                  }`}
                 >
                   {sz}
                 </span>
@@ -92,7 +112,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onOpenModal }
           </span>
           
           <span className="text-[8.5px] sm:text-[10px] font-mono text-zinc-500">
-            {product.status === 'available' ? 'DROP 01' : 'PRÓXIMO'}
+            {product.status === 'available' ? 'DROP 01' : product.status === 'sold_out' ? 'VENDIDA' : 'PRÓXIMO'}
           </span>
         </div>
 

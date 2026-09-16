@@ -9,7 +9,7 @@
  * - Envíos: Nacionales e Internacionales
  */
 
-export type ProductStatus = 'available' | 'upcoming';
+export type ProductStatus = 'available' | 'upcoming' | 'sold_out';
 
 export type CategoryId = 't-shirt' | 'oversize' | 'basics';
 
@@ -274,13 +274,13 @@ export const products: Product[] = [
     status: "available",
     fabric: "PIMA PERUANA",
     weight: "175 GSM",
-    sizes: ["XL", "XXL"],
+    sizes: ["XL"],
     description: "T-Shirt en Pima Peruana de 175 GSM, en color blanco, con diseño en relieve tonal.\n\nSuavidad, frescura y una caída natural para un look limpio y contemporáneo.",
     details: [
       "Pima Peruana",
       "175 GSM",
       "Color: Blanco",
-      "Tallas: XL, XXL",
+      "Talla: XL",
       "Envíos nacionales e internacionales"
     ],
     images: [
@@ -329,7 +329,7 @@ export const products: Product[] = [
     subtitle: "Pima Peruana · 175 GSM",
     price: 100000,
     category: "t-shirt",
-    status: "available",
+    status: "sold_out",
     fabric: "PIMA PERUANA",
     weight: "175 GSM",
     sizes: ["L"],
@@ -338,7 +338,7 @@ export const products: Product[] = [
       "Pima Peruana",
       "175 GSM",
       "Color: Negro",
-      "Talla: L",
+      "Talla: L (Vendida / Agotada)",
       "Envíos nacionales e internacionales"
     ],
     images: [

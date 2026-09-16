@@ -43,6 +43,13 @@ export const siteConfig = {
       return encodeURIComponent(msg);
     },
     
+    // Mensaje para consultar por restock de prenda vendida
+    productSoldOutInquiry: (productName: string) => {
+      return encodeURIComponent(
+        `Hola, De To’ Shop. Vi que la prenda ${productName} está vendida. ¿Cuándo tendrán disponibilidad o restock?`
+      );
+    },
+    
     // Mensaje para consultar por próximos drops (Oversize / Básicas)
     dropInquiry: (dropName: string) => {
       return encodeURIComponent(

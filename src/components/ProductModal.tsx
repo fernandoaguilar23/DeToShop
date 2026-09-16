@@ -38,13 +38,17 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
     setSelectedSize(product.sizes[0] || 'M');
   }, [product]);
 
-  // Generate dynamic WhatsApp link with user's exact requested template:
-  // "Hola, De To’ Shop. Estoy interesado en la T-Shirt [NOMBRE DEL PRODUCTO], talla [TALLA]. ¿Me confirman disponibilidad?"
+  // Generate dynamic WhatsApp link with user's exact requested template
   const handleWhatsAppClick = () => {
-    const messageText = siteConfig.whatsappMessages.productInquiry(
-      product.name,
-      selectedSize
-    );
+    let messageText: string;
+    if (product.status === 'sold_out') {
+      messageText = siteConfig.whatsappMessages.productSoldOutInquiry(product.name);
+    } else {
+      messageText = siteConfig.whatsappMessages.productInquiry(
+        product.name,
+        selectedSize
+      );
+    }
     const waUrl = siteConfig.getWhatsAppUrl(messageText);
     window.open(waUrl, '_blank', 'noopener,noreferrer');
   };
@@ -88,7 +92,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
             </span>
             <span className="text-zinc-600">/</span>
             <span className="text-[10px] sm:text-[11px] font-mono text-zinc-400 uppercase truncate">
-              DROP 01 · DISPONIBLE
+              {product.status === 'sold_out' ? 'DROP 01 · VENDIDA' : 'DROP 01 · DISPONIBLE'}
             </span>
           </div>
 
@@ -125,10 +129,17 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
 
               {/* Status Badge */}
               <div className="absolute top-2 left-2 sm:top-3 sm:left-3">
-                <span className="inline-flex items-center space-x-1 sm:space-x-1.5 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-[8.5px] sm:text-xs font-medium font-mono tracking-widest uppercase bg-zinc-900/90 text-emerald-400 border border-emerald-500/30 backdrop-blur-md shadow-md">
-                  <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                  <span>DISPONIBLE</span>
-                </span>
+                {product.status === 'sold_out' ? (
+                  <span className="inline-flex items-center space-x-1 sm:space-x-1.5 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-[8.5px] sm:text-xs font-medium font-mono tracking-widest uppercase bg-zinc-900/90 text-zinc-400 border border-white/15 backdrop-blur-md shadow-md">
+                    <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-zinc-500" />
+                    <span>VENDIDA</span>
+                  </span>
+                ) : (
+                  <span className="inline-flex items-center space-x-1 sm:space-x-1.5 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-[8.5px] sm:text-xs font-medium font-mono tracking-widest uppercase bg-zinc-900/90 text-emerald-400 border border-emerald-500/30 backdrop-blur-md shadow-md">
+                    <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                    <span>DISPONIBLE</span>
+                  </span>
+                )}
               </div>
 
               {/* Packaged indicator badge */}
@@ -178,12 +189,21 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
                 <h2 className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-bold font-sans tracking-wide text-white uppercase leading-snug">
                   {product.name}
                 </h2>
-                <div className="flex items-center space-x-2 mt-2">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_8px_rgba(52,211,153,0.8)]" />
-                  <span className="text-[11px] sm:text-xs font-mono font-bold tracking-widest uppercase text-emerald-400">
-                    DROP 01 · DISPONIBLE
-                  </span>
-                </div>
+                {product.status === 'sold_out' ? (
+                  <div className="flex items-center space-x-2 mt-2">
+                    <span className="w-2 h-2 rounded-full bg-zinc-500" />
+                    <span className="text-[11px] sm:text-xs font-mono font-bold tracking-widest uppercase text-zinc-400">
+                      DROP 01 · VENDIDA / AGOTADA
+                    </span>
+                  </div>
+                ) : (
+                  <div className="flex items-center space-x-2 mt-2">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_8px_rgba(52,211,153,0.8)]" />
+                    <span className="text-[11px] sm:text-xs font-mono font-bold tracking-widest uppercase text-emerald-400">
+                      DROP 01 · DISPONIBLE
+                    </span>
+                  </div>
+                )}
               </div>
 
               {/* Price */}
@@ -222,10 +242,14 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
               <div>
                 <div className="flex items-center justify-between mb-2">
                   <label className="text-[11px] sm:text-xs font-bold font-mono tracking-widest uppercase text-zinc-300">
-                    TALLAS DISPONIBLES
+                    {product.status === 'sold_out' ? 'TALLAS DE LA EDICIÓN' : 'TALLAS DISPONIBLES'}
                   </label>
                   <span className="text-[10px] sm:text-[11px] font-mono text-zinc-400 uppercase">
-                    ELEGIDA: <strong className="text-white font-bold">{selectedSize}</strong>
+                    {product.status === 'sold_out' ? (
+                      <span>ESTADO: <strong className="text-zinc-300 font-bold">VENDIDA</strong></span>
+                    ) : (
+                      <>ELEGIDA: <strong className="text-white font-bold">{selectedSize}</strong></>
+                    )}
                   </span>
                 </div>
 
@@ -238,7 +262,9 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
                         type="button"
                         onClick={() => setSelectedSize(size)}
                         className={`min-w-[48px] sm:min-w-[56px] py-2 px-3.5 rounded-xl text-xs sm:text-sm font-mono font-bold tracking-wider transition-all duration-150 ${
-                          isSelected
+                          product.status === 'sold_out'
+                            ? 'bg-white/5 text-zinc-500 border border-white/5 line-through cursor-default'
+                            : isSelected
                             ? 'bg-white text-black shadow-lg scale-105 border-2 border-emerald-400'
                             : 'bg-white/5 hover:bg-white/10 text-zinc-300 border border-white/15'
                         }`}
@@ -285,13 +311,23 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
 
             {/* ACTION SECTION (WHATSAPP CONVERSION) */}
             <div className="pt-4 border-t border-white/10">
-              <button
-                onClick={handleWhatsAppClick}
-                className="w-full flex items-center justify-center space-x-2 sm:space-x-3 bg-emerald-500 hover:bg-emerald-400 active:scale-98 text-black py-3.5 sm:py-4 px-6 rounded-xl sm:rounded-2xl font-extrabold text-xs sm:text-sm uppercase tracking-widest transition-all duration-200 shadow-xl hover:shadow-emerald-500/20"
-              >
-                <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 fill-black shrink-0" />
-                <span>CONSULTAR POR WHATSAPP →</span>
-              </button>
+              {product.status === 'sold_out' ? (
+                <button
+                  onClick={handleWhatsAppClick}
+                  className="w-full flex items-center justify-center space-x-2 sm:space-x-3 bg-zinc-800 hover:bg-zinc-700 active:scale-98 text-white border border-white/15 py-3.5 sm:py-4 px-6 rounded-xl sm:rounded-2xl font-bold text-xs sm:text-sm uppercase tracking-widest transition-all duration-200 shadow-xl"
+                >
+                  <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 fill-white shrink-0" />
+                  <span>CONSULTAR RESTOCK POR WHATSAPP →</span>
+                </button>
+              ) : (
+                <button
+                  onClick={handleWhatsAppClick}
+                  className="w-full flex items-center justify-center space-x-2 sm:space-x-3 bg-emerald-500 hover:bg-emerald-400 active:scale-98 text-black py-3.5 sm:py-4 px-6 rounded-xl sm:rounded-2xl font-extrabold text-xs sm:text-sm uppercase tracking-widest transition-all duration-200 shadow-xl hover:shadow-emerald-500/20"
+                >
+                  <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 fill-black shrink-0" />
+                  <span>CONSULTAR POR WHATSAPP →</span>
+                </button>
+              )}
             </div>
 
           </div>
