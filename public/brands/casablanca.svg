@@ -1,4 +1,95 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 70" fill="#ffffff">
-  <text x="50%" y="38" font-family="'Didot', 'Bodoni MT', 'Times New Roman', serif" font-weight="700" font-size="34" letter-spacing="8" text-anchor="middle">CASABLANCA</text>
-  <text x="50%" y="58" font-family="'Space Grotesk', Arial, sans-serif" font-weight="600" font-size="11" letter-spacing="8" text-anchor="middle" fill="#a1a1aa">PARIS</text>
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 250 79">
+  <path fill="#FFFFFF" d="M225.53 45.627h-20.557l9.742-28.153v-.33a.75.75 0 0 1 .523-.22c.192 0 .385.082.523.22v.33l9.742 28.153h.027Zm-3.22-43.234V1.65h-7.595v.743l-23.86 67.204c-.578 1.43-1.238 2.67-1.981 3.688-.743 1.045-1.",
+    "viewBox": "0 0 250 79",
+    "width": null,
+    "height": null
+  },
+  {
+    "type": "svg",
+    "outer": "<svg class="icon icon-wishlist" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" fill="none"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 ",
+    "viewBox": "0 0 24 24",
+    "width": "20",
+    "height": "20"
+  },
+  {
+    "type": "svg",
+    "outer": "<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icons">
+<path id="Vector" d="M13.4378 5.625C13.2847 7.69023 11.719 9.375 10.0003 9.375C8.28153 9.375 6.71317 7.69063 6.56278 5.625C6.40653 3.47656 7.92996 1.875 10.0003 1.875C12.0706 1.875 13.594 3",
+    "viewBox": "0 0 20 20",
+    "width": "20",
+    "height": "20"
+  },
+  {
+    "type": "svg",
+    "outer": "<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icons">
+<path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M3.125 6.875C2.95924 6.875 2.80027 6.94085 2.68306 7.05806C2.56585 7.17527 2.5 7.33424 2.5 7.5V15.9375C2.5 17.1187 3.50625 18.12",
+    "viewBox": "0 0 20 20",
+    "width": "20",
+    "height": "20"
+  },
+  {
+    "type": "svg",
+    "outer": "<svg class="aa-SubmitIcon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M16.041 15.856c-0.034 0.026-0.067 0.055-0.099 0.087s-0.060 0.064-0.087 0.099c-1.258 1.213-2.969 1.958-4.855 1.958-1.933 0-3.682-0.782-4.95-2.050s-2.050-3.017-2.050-4.95 0.782-3.682 2.050-4.95 3.017-2.0",
+    "viewBox": "0 0 24 24",
+    "width": "20",
+    "height": "20"
+  },
+  {
+    "type": "svg",
+    "outer": "<svg class="aa-LoadingIcon" viewBox="0 0 100 100" width="20" height="20"><circle cx="50" cy="50" fill="none" r="35" stroke="currentColor" stroke-dasharray="164.93361431346415 56.97787143782138" stroke-width="6">
+  <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur",
+    "viewBox": "0 0 100 100",
+    "width": "20",
+    "height": "20"
+  },
+  {
+    "type": "svg",
+    "outer": "<svg class="aa-ClearIcon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M5.293 6.707l5.293 5.293-5.293 5.293c-0.391 0.391-0.391 1.024 0 1.414s1.024 0.391 1.414 0l5.293-5.293 5.293 5.293c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414l-5.293-5.293 5.293-5.293c0.391-0.391",
+    "viewBox": "0 0 24 24",
+    "width": "18",
+    "height": "18"
+  },
+  {
+    "type": "svg",
+    "outer": "<svg class="icon-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <path d="M24.145 24.0781L7.73438 8.0166" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+  <path d="M24.145 8.0166L7.73438 24.0781" stroke="currentColor" stro",
+    "viewBox": "0 0 32 32",
+    "width": null,
+    "height": null
+  },
+  {
+    "type": "img",
+    "src": "https://casablancaparis.com/cdn/shop/files/CASA_SS23-CC_DIAMOND_LOGO_FOR_WEB-01_dfe734b3-dfa9-4325-8e44-a4e99780b8bd.png?crop=center&height=10&v=1771505803&width=10",
+    "alt": "Image",
+    "width": 80,
+    "height": 80
+  }
+]
+Navigating to fearofgod https://fearofgod.com
+Results for fearofgod: [
+  {
+    "type": "svg",
+    "outer": "<svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M1 3.5H13" stroke="currentColor" stroke-width="var(--icon-stroke-width)" stroke-linecap="round"></path>
+  <path d="M1 10.5H13" stroke="currentColor" stroke-width="var(--icon-",
+    "viewBox": "0 0 14 14",
+    "width": "14",
+    "height": "14"
+  },
+  {
+    "type": "svg",
+    "outer": "<svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12 2L2 12" stroke="currentColor" stroke-width="var(--icon-stroke-width)" stroke-linecap="round" stroke-linejoin="round"></path>
+  <path d="M12 12L2 2" stroke="currentColor" ",
+    "viewBox": "0 0 14 14",
+    "width": "14",
+    "height": "14"
+  },
+  {
+    "type": "svg",
+    "outer": "<svg class="{{ icon_class }}" role="presentation" viewBox="0 0 16 14">
+  <path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path>
 </svg>

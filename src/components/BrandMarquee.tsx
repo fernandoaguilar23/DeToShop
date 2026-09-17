@@ -161,10 +161,10 @@ export const BrandMarquee: React.FC = () => {
       <div className="relative w-full overflow-hidden">
         <LogoLoop
           logos={brandLogos}
-          speed={60}
+          speed={70}
           direction="left"
-          logoHeight={32}
-          gap={60}
+          logoHeight={26}
+          gap={50}
           hoverSpeed={0}
           scaleOnHover={true}
           fadeOut={true}

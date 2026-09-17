@@ -1,3 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 70" fill="#ffffff">
-      <text x="50%" y="48" font-family="'Arial Black', 'Helvetica Neue', sans-serif" font-weight="900" font-size="40" letter-spacing="3" text-anchor="middle">DSQUARED2</text>
-    </svg>
+<svg viewBox="0 0 261 33" aria-label="DSQUARED2" focusable="false">
+                    <path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd" d="M8.69652 7.99881H11.3359C13.846 7.99881 15.3605 8.52349 16.6583 9.78995C17.9131 11.0577 18.6485 13.0253 18.6485 15.3418C18.6485 17.308 18.1",
+    "viewBox": "0 0 261 33",
+    "width": "261",
+    "height": "33"
+  },
+  {
+    "type": "svg",
+    "outer": "<svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" focusable="false">
+    <use href="#close"></use>
+</svg>
