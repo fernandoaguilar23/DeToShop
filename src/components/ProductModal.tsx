@@ -204,6 +204,14 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
                     </span>
                   </div>
                 )}
+
+                {/* Last Unit Available Micro-Badge */}
+                {product.status === 'available' && product.sizes.length === 1 && (
+                  <div className="mt-2.5 inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/25 text-amber-300 text-[10px] sm:text-xs font-mono font-bold tracking-wider uppercase">
+                    <span>🔥</span>
+                    <span>ÚLTIMA UNIDAD DISPONIBLE EN {product.sizes[0]}</span>
+                  </div>
+                )}
               </div>
 
               {/* Price */}
@@ -310,7 +318,23 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
             </div>
 
             {/* ACTION SECTION (WHATSAPP CONVERSION) */}
-            <div className="pt-4 border-t border-white/10">
+            <div className="pt-3.5 sm:pt-4 border-t border-white/10 space-y-3">
+              {/* Quick Delivery & Packaging Trust Box */}
+              <div className="p-2.5 sm:p-3 rounded-xl bg-white/[0.02] border border-white/10 space-y-1.5">
+                <div className="flex items-start space-x-2 text-[10.5px] sm:text-xs text-zinc-300 font-sans">
+                  <span className="text-emerald-400 font-bold shrink-0">⚡</span>
+                  <p className="leading-snug">
+                    <strong className="text-white font-medium">Tiempos de entrega:</strong> Barranquilla y Soledad el mismo día · Resto del país (2–4 días) · Internacionales (4–7 días hábiles).
+                  </p>
+                </div>
+                <div className="flex items-start space-x-2 text-[10.5px] sm:text-xs text-zinc-300 font-sans">
+                  <span className="text-emerald-400 font-bold shrink-0">📦</span>
+                  <p className="leading-snug">
+                    <strong className="text-white font-medium">Empaque:</strong> Cada prenda viaja en empaque sellado de protección.
+                  </p>
+                </div>
+              </div>
+
               {product.status === 'sold_out' ? (
                 <button
                   onClick={handleWhatsAppClick}

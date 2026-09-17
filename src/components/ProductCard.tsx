@@ -102,6 +102,14 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onOpenModal }
               ))}
             </div>
           </div>
+
+          {/* Last Unit Available Micro-Badge */}
+          {product.status === 'available' && product.sizes.length === 1 && (
+            <div className="mt-2 inline-flex items-center space-x-1 px-2 py-0.5 rounded-md bg-amber-500/10 border border-amber-500/25 text-amber-300 text-[8px] xs:text-[9px] font-mono font-bold tracking-wider uppercase w-fit">
+              <span className="text-[9.5px]">🔥</span>
+              <span>ÚLTIMA UNIDAD DISPONIBLE EN {product.sizes[0]}</span>
+            </div>
+          )}
         </div>
 
         {/* Card Action Button */}
