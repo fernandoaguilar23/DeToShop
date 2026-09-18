@@ -126,7 +126,7 @@ export const products: Product[] = [
     subtitle: "Pima Peruana · 175 GSM",
     price: 100000,
     category: "t-shirt",
-    status: "available",
+    status: "sold_out",
     fabric: "PIMA PERUANA",
     weight: "175 GSM",
     sizes: ["XL", "XXL"],
@@ -135,7 +135,7 @@ export const products: Product[] = [
       "Pima Peruana",
       "175 GSM",
       "Color: Blanco",
-      "Tallas: XL, XXL",
+      "Tallas: XL, XXL (Vendida / Agotada)",
       "Envíos nacionales e internacionales"
     ],
     images: [
