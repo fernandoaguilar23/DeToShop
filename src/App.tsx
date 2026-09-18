@@ -124,6 +124,7 @@ export const App: React.FC = () => {
           selectedCategory={selectedCategory}
           onSelectCategory={setSelectedCategory}
           productCount={filteredProducts.length}
+          availableCount={filteredProducts.filter((p) => p.status === 'available').length}
         />
 
         {/* CONTENT RENDER: AVAILABLE PRODUCTS OR UPCOMING DROP VIEW */}

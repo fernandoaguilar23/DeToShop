@@ -5,12 +5,14 @@ interface FilterBarProps {
   selectedCategory: CategoryId;
   onSelectCategory: (id: CategoryId) => void;
   productCount: number;
+  availableCount?: number;
 }
 
 export const FilterBar: React.FC<FilterBarProps> = ({
   selectedCategory,
   onSelectCategory,
   productCount,
+  availableCount = productCount,
 }) => {
   return (
     <div className="w-full pb-4">
@@ -59,7 +61,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
         {selectedCategory === 't-shirt' ? (
           <div className="inline-flex items-center space-x-2 text-[10px] sm:text-[11px] font-mono tracking-widest uppercase text-zinc-400">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            <span className="text-emerald-300 font-bold">9 PRENDAS DISPONIBLES</span>
+            <span className="text-emerald-300 font-bold">{availableCount} PRENDAS DISPONIBLES</span>
             <span className="text-zinc-600">·</span>
             <span className="text-white font-bold">$100.000 COP</span>
           </div>
