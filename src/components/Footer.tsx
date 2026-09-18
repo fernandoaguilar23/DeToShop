@@ -1,8 +1,12 @@
 import React from 'react';
-import { MessageCircle, Instagram, ArrowUp, Globe } from 'lucide-react';
+import { MessageCircle, Instagram, ArrowUp } from 'lucide-react';
 import { siteConfig } from '../config/site';
 
-export const Footer: React.FC = () => {
+interface FooterProps {
+  onExploreClick?: () => void;
+}
+
+export const Footer: React.FC<FooterProps> = ({ onExploreClick }) => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -12,8 +16,15 @@ export const Footer: React.FC = () => {
     window.open(url, '_blank', 'noopener,noreferrer');
   };
 
+  const scrollToPolicies = () => {
+    const el = document.getElementById('antes-de-comprar');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <footer className="w-full bg-black/40 backdrop-blur-md border-t border-white/10 pt-12 sm:pt-16 pb-24 sm:pb-16 text-zinc-400">
+    <footer className="w-full bg-black/60 backdrop-blur-md border-t border-white/10 pt-12 sm:pt-16 pb-24 sm:pb-16 text-zinc-400">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Footer Grid */}
@@ -34,17 +45,25 @@ export const Footer: React.FC = () => {
             </p>
 
             <p className="text-xs text-zinc-400 max-w-md leading-relaxed font-sans font-light">
-              Boutique digital multimarca con curaduría exclusiva en Pima Peruana.
-              <span className="block mt-1">Piezas seleccionadas para elevar tu estilo y autenticidad.</span>
+              Boutique digital con curaduría exclusiva en Pima Peruana de 175 GSM.
+              <span className="block mt-1">Piezas seleccionadas para elevar lo esencial con identidad propia.</span>
             </p>
           </div>
 
-          {/* Contact & WhatsApp */}
+          {/* Direct Channels */}
           <div className="space-y-2.5 sm:space-y-3">
             <h4 className="text-xs font-mono font-bold tracking-widest uppercase text-white">
-              CONTACTO
+              CANALES DIRECTOS
             </h4>
             <ul className="space-y-2 text-xs font-sans">
+              <li>
+                <button
+                  onClick={onExploreClick || scrollToTop}
+                  className="text-zinc-300 hover:text-white transition-colors uppercase font-mono text-[11px]"
+                >
+                  Colección Drop 01
+                </button>
+              </li>
               <li>
                 <button
                   onClick={handleWhatsApp}
@@ -65,33 +84,46 @@ export const Footer: React.FC = () => {
                   <span>Instagram ({siteConfig.socials.instagramHandle})</span>
                 </a>
               </li>
-              <li className="text-zinc-400 pt-1 flex items-center space-x-1.5 font-mono text-[10px] sm:text-[11px]">
-                <Globe className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                <span>Envíos Nacionales e Internacionales</span>
-              </li>
             </ul>
           </div>
 
-          {/* Drops & Collections Info */}
+          {/* Legal & Policies */}
           <div className="space-y-2.5 sm:space-y-3">
             <h4 className="text-xs font-mono font-bold tracking-widest uppercase text-white">
-              COLECCIONES
+              INFORMACIÓN & POLÍTICAS
             </h4>
-            <ul className="space-y-1.5 sm:space-y-2 text-xs font-sans text-zinc-400">
-              <li className="flex items-center space-x-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0" />
-                <span className="text-zinc-200">T-Shirt (175 GSM)</span>
-                <span className="text-emerald-400 font-mono text-[10px] uppercase font-bold">— Disponible</span>
+            <ul className="space-y-2 text-xs font-sans text-zinc-400">
+              <li>
+                <button
+                  onClick={scrollToPolicies}
+                  className="hover:text-white transition-colors text-left"
+                >
+                  Política de Cambios
+                </button>
               </li>
-              <li className="flex items-center space-x-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-zinc-600 shrink-0" />
-                <span>Oversize (250 GSM)</span>
-                <span className="text-zinc-500 font-mono text-[10px] uppercase">— Próximamente</span>
+              <li>
+                <button
+                  onClick={scrollToPolicies}
+                  className="hover:text-white transition-colors text-left"
+                >
+                  Política de Envíos
+                </button>
               </li>
-              <li className="flex items-center space-x-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-zinc-600 shrink-0" />
-                <span>Basics</span>
-                <span className="text-zinc-500 font-mono text-[10px] uppercase">— Próximamente</span>
+              <li>
+                <button
+                  onClick={scrollToPolicies}
+                  className="hover:text-white transition-colors text-left"
+                >
+                  Términos y Condiciones
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={scrollToPolicies}
+                  className="hover:text-white transition-colors text-left"
+                >
+                  Política de Privacidad
+                </button>
               </li>
             </ul>
           </div>

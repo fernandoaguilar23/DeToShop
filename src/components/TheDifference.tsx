@@ -7,28 +7,28 @@ export const TheDifference: React.FC = () => {
       num: '01',
       title: 'PIMA PERUANA',
       description: 'Suavidad, comodidad y una sensación premium desde el primer contacto.',
-      detail: 'Fibra extra-larga de máxima pureza.',
+      subtext: 'Fibra de alta calidad seleccionada para nuestros drops.',
       icon: Sparkles,
     },
     {
       num: '02',
       title: '175 GSM',
-      description: 'Un gramaje pensado para ofrecer estructura y una caída natural.',
-      detail: 'Equilibrio perfecto entre frescura y porte.',
+      description: 'El gramaje pensado para lograr una estructura equilibrada y una caída natural.',
+      subtext: 'Equilibrio perfecto entre frescura y porte.',
       icon: Layers,
     },
     {
       num: '03',
-      title: 'MULTIMARCA',
-      description: 'Seleccionamos cada pieza para construir drops con identidad propia.',
-      detail: 'Firmas icónicas con estilo contemporáneo.',
+      title: 'SELECCIÓN MULTIMARCA',
+      description: 'No llenamos el catálogo. Seleccionamos cada pieza para construir drops con identidad propia.',
+      subtext: 'Curaduría exclusiva de piezas seleccionadas.',
       icon: ShieldCheck,
     },
     {
       num: '04',
       title: 'ATENCIÓN DIRECTA',
-      description: 'Resuelve tus dudas sobre tallas, disponibilidad y envíos directamente con nuestro equipo.',
-      detail: 'Asesoría inmediata y personalizada.',
+      description: 'Tallas, disponibilidad, pedidos y envíos directamente con nuestro equipo.',
+      subtext: 'Asesoría inmediata y personalizada.',
       icon: MessageCircle,
     },
   ];
@@ -38,11 +38,11 @@ export const TheDifference: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-14">
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
           <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-3 sm:mb-4">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
             <span className="text-[10px] sm:text-[11px] font-mono tracking-widest uppercase text-zinc-300">
-              CALIDAD & VALOR DIFERENCIAL
+              VALOR DIFERENCIAL
             </span>
           </div>
 
@@ -62,26 +62,26 @@ export const TheDifference: React.FC = () => {
             return (
               <div
                 key={pillar.num}
-                className="group relative p-5 sm:p-7 rounded-2xl glass-card border border-white/10 hover:border-emerald-500/30 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1 shadow-lg hover:shadow-emerald-950/20"
+                className="group relative p-6 sm:p-7 rounded-2xl sm:rounded-3xl glass-card border border-white/10 hover:border-emerald-500/30 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1 shadow-lg hover:shadow-emerald-950/20"
               >
-                {/* Top index & icon */}
                 <div>
+                  {/* Top index & icon */}
                   <div className="flex items-center justify-between mb-5 sm:mb-6">
                     <span className="text-xs font-mono font-bold tracking-widest text-emerald-400/90 bg-emerald-950/40 border border-emerald-500/20 px-2.5 py-1 rounded-full">
                       {pillar.num}
                     </span>
-                    <div className="p-2 rounded-xl bg-white/5 text-zinc-400 group-hover:text-emerald-400 group-hover:bg-emerald-500/10 transition-colors">
+                    <div className="p-2.5 rounded-xl bg-white/5 text-zinc-400 group-hover:text-emerald-400 group-hover:bg-emerald-500/10 transition-colors">
                       <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
                     </div>
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-sm sm:text-lg font-bold font-sans text-white uppercase tracking-wide mb-2">
+                  <h3 className="text-sm sm:text-base font-bold font-sans text-white uppercase tracking-wide mb-2.5">
                     {pillar.title}
                   </h3>
 
                   {/* Editorial Description */}
-                  <p className="text-xs sm:text-sm text-zinc-400 font-sans font-light leading-relaxed mb-4">
+                  <p className="text-xs sm:text-sm text-zinc-300 font-sans font-light leading-relaxed mb-3">
                     {pillar.description}
                   </p>
                 </div>
@@ -89,7 +89,7 @@ export const TheDifference: React.FC = () => {
                 {/* Sub-detail tag */}
                 <div className="pt-3 border-t border-white/5">
                   <span className="text-[10px] sm:text-[11px] font-mono text-zinc-500 tracking-wider">
-                    {pillar.detail}
+                    {pillar.subtext}
                   </span>
                 </div>
               </div>

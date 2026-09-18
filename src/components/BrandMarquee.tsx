@@ -152,7 +152,7 @@ export const BrandMarquee: React.FC = () => {
         <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/[0.03] border border-white/10 shadow-sm">
           <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
           <span className="text-[9.5px] sm:text-[10.5px] font-mono tracking-widest uppercase text-zinc-400">
-            MARCAS OFICIALES · PIEZAS EXCLUSIVAS
+            SELECCIÓN MULTIMARCA · PIEZAS EXCLUSIVAS
           </span>
         </div>
       </div>

@@ -1,21 +1,23 @@
 import React, { useState, useRef } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
+import { QuickInfoBar } from './components/QuickInfoBar';
+import { BrandMarquee } from './components/BrandMarquee';
 import { FilterBar } from './components/FilterBar';
 import { ProductCard } from './components/ProductCard';
 import { ProductModal } from './components/ProductModal';
 import { ComingSoonView } from './components/ComingSoonView';
 import { TheDifference } from './components/TheDifference';
-import { SeenOnYou } from './components/SeenOnYou';
-import { ComingSoonSection } from './components/ComingSoonSection';
+import { ProductDetailsSection } from './components/ProductDetailsSection';
+import { BuyingProcessSection } from './components/BuyingProcessSection';
 import { ShippingSection } from './components/ShippingSection';
-import { WhatsAppCTA } from './components/WhatsAppCTA';
+import { ComingSoonSection } from './components/ComingSoonSection';
+import { BeforeBuyingSection } from './components/BeforeBuyingSection';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 import { Footer } from './components/Footer';
 import { products, Product, CATEGORIES, CategoryId } from './data/products';
 import Beams from './components/Beams';
 import { WarpText } from './components/WarpText';
-import { BrandMarquee } from './components/BrandMarquee';
 
 export const App: React.FC = () => {
   // Category state defaults to the available category: 't-shirt'
@@ -61,33 +63,36 @@ export const App: React.FC = () => {
         <Navbar onExploreClick={scrollToCollection} />
       </div>
 
-      {/* 01 — HERO (Deseo & Posicionamiento) */}
+      {/* 01 — HERO (Comercial, contraste alto, precio visible $100.000 COP) */}
       <div className="relative z-10">
         <Hero onExploreClick={scrollToCollection} />
       </div>
 
-      {/* BRAND LOGOS SLIDER (React Bits LogoLoop) */}
+      {/* 02 — INFORMACIÓN RÁPIDA (Pima Peruana · 175 GSM · $100.000 COP · Envíos) */}
+      <QuickInfoBar />
+
+      {/* MARQUESINA MULTIMARCA (Selección Multimarca · Piezas Exclusivas) */}
       <BrandMarquee />
 
-      {/* 02 — DROP 01 / THE COLLECTION (Catálogo) */}
+      {/* 03 — DROP 01 / T-SHIRTS (Catálogo Disponible) */}
       <section
         id="the-collection"
         ref={collectionRef}
         className="relative z-10 flex-grow max-w-7xl mx-auto w-full px-3.5 sm:px-6 lg:px-8 py-12 sm:py-20 scroll-mt-16 sm:scroll-mt-20"
       >
         {/* Section Title & Concept */}
-        <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-12 px-2">
+        <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-10 px-2">
           <div className="inline-flex items-center space-x-2 px-3 sm:px-3.5 py-1 rounded-full bg-white/5 border border-white/10 mb-3 sm:mb-4">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0" />
-            <span className="text-[10px] sm:text-[11px] font-mono tracking-widest uppercase text-zinc-300">
-              DROP 01 & LANZAMIENTOS OFICIALES
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0 animate-pulse" />
+            <span className="text-[10px] sm:text-[11px] font-mono tracking-widest uppercase text-emerald-300 font-bold">
+              DROP 01 — DISPONIBLE
             </span>
           </div>
 
           {/* Section Heading with Interactive WarpText */}
           <div className="w-full max-w-xs sm:max-w-md mx-auto mb-2 sm:mb-3">
             <WarpText
-              text="THE COLLECTION"
+              text="T-SHIRTS"
               color="#ffffff"
               warpStrength={0.07}
               warpScale={1.6}
@@ -96,7 +101,7 @@ export const App: React.FC = () => {
               pointerStrength={0.35}
               refraction={0.018}
               ripple={true}
-              fontSize="clamp(1.75rem, 5vw, 3rem)"
+              fontSize="clamp(2rem, 6vw, 3.5rem)"
               fontWeight={900}
               fontFamily="Syncopate, Space Grotesk, sans-serif"
               letterSpacing="0.08em"
@@ -105,9 +110,12 @@ export const App: React.FC = () => {
             />
           </div>
 
+          <div className="text-xs sm:text-sm font-mono tracking-widest uppercase text-emerald-400 font-semibold mb-2">
+            PIMA PERUANA · 175 GSM
+          </div>
+
           <p className="text-xs sm:text-sm font-sans tracking-wide text-zinc-300 font-light max-w-lg mx-auto leading-relaxed">
-            Piezas seleccionadas para cada drop.
-            <span className="block mt-1">Descubre lo que está disponible y prepárate para lo que viene.</span>
+            9 piezas seleccionadas para este primer lanzamiento.
           </p>
         </div>
 
@@ -118,7 +126,7 @@ export const App: React.FC = () => {
           productCount={filteredProducts.length}
         />
 
-        {/* CONTENT RENDER: AVAILABLE PRODUCTS OR COMING SOON TEASER */}
+        {/* CONTENT RENDER: AVAILABLE PRODUCTS OR UPCOMING DROP VIEW */}
         {currentCategoryInfo.isAvailable ? (
           /* Responsive Products Grid: 2 columns on mobile, 3 on desktop */
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-2.5 xs:gap-3.5 sm:gap-6 lg:gap-8 mt-5 sm:mt-8 animate-fade-in max-w-7xl mx-auto">
@@ -131,7 +139,7 @@ export const App: React.FC = () => {
             ))}
           </div>
         ) : (
-          /* Upcoming Drop Teaser View (OVERSIZE / BASICS) */
+          /* Upcoming Drop Teaser View */
           <ComingSoonView
             category={currentCategoryInfo}
             onGoToAvailable={() => setSelectedCategory('t-shirt')}
@@ -139,23 +147,26 @@ export const App: React.FC = () => {
         )}
       </section>
 
-      {/* 03 — THE DE TO’ DIFFERENCE (4 pilares editoriales de calidad) */}
+      {/* 04 — THE DE TO’ DIFFERENCE (4 pilares de calidad textil) */}
       <TheDifference />
 
-      {/* 04 — SEEN ON YOU (Experiencias de la comunidad sin testimonios falsos) */}
-      <SeenOnYou />
+      {/* 05 — DETALLES QUE SE NOTAN (Textura, Estructura, Detalles, Presentación) */}
+      <ProductDetailsSection />
 
-      {/* 05 — COMING SOON (Expectativa para Oversize 250 GSM y Basics) */}
-      <ComingSoonSection />
+      {/* 06 — COMPRAR DE TO’ ES SIMPLE (4 pasos hacia la compra) */}
+      <BuyingProcessSection />
 
-      {/* 06 — SHIPPING (Sección unificada: Tu Drop. Donde estés.) */}
+      {/* 07 — TU DROP. DONDE ESTÉS. (Envíos locales el mismo día, nacionales 2-4 días, internacionales) */}
       <ShippingSection />
 
-      {/* 07 — WHATSAPP / CTA DE COMPRA (¿Tienes una prenda en mente?) */}
-      <WhatsAppCTA />
+      {/* 08 — LO QUE VIENE (Próximos drops Oversize 250 GSM y Basics 175 GSM) */}
+      <ComingSoonSection />
 
-      {/* 08 — FOOTER (Minimalista, sobrio y sin redundancias) */}
-      <Footer />
+      {/* 09 — ANTES DE COMPRAR (Confianza, Tallas, Disponibilidad, Pagos y Políticas) */}
+      <BeforeBuyingSection />
+
+      {/* 10 — FOOTER (Enlaces de marca, Instagram, WhatsApp y políticas) */}
+      <Footer onExploreClick={scrollToCollection} />
 
       {/* Product Detail Modal */}
       <ProductModal
@@ -163,7 +174,7 @@ export const App: React.FC = () => {
         onClose={() => setActiveModalProduct(null)}
       />
 
-      {/* Floating WhatsApp Action with safe-area spacing */}
+      {/* Floating WhatsApp Action with safe-area spacing and quick-help menu */}
       <FloatingWhatsApp />
     </div>
   );

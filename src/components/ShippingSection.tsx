@@ -1,33 +1,44 @@
 import React from 'react';
-import { Zap, Truck, Globe2, ShieldCheck, PackageCheck, Clock } from 'lucide-react';
+import { Zap, Truck, Globe2, ShieldCheck, PackageCheck, Clock, MessageCircle } from 'lucide-react';
+import { siteConfig } from '../config/site';
 
 export const ShippingSection: React.FC = () => {
   const deliveryTimes = [
     {
       icon: Zap,
       region: 'BARRANQUILLA Y SOLEDAD',
-      badge: 'EXPRÉS LOCAL',
+      badge: 'ENTREGA LOCAL',
       time: 'EL MISMO DÍA',
-      desc: 'Despacho prioritario local directo a tu dirección. Si ordenas hoy, lo recibes y estrenas hoy mismo.',
+      desc: 'Despacho prioritario local directo a tu dirección para pedidos confirmados en el día.',
       highlight: true,
+      subtext: 'Entrega directa y segura',
     },
     {
       icon: Truck,
-      region: 'RESTO DEL PAÍS (COLOMBIA)',
-      badge: 'TODO EL PAÍS',
+      region: 'RESTO DE COLOMBIA',
+      badge: 'NACIONAL',
       time: '2 A 4 DÍAS',
-      desc: 'Envíos seguros a todas las ciudades y municipios de Colombia con número de guía para rastreo en tiempo real.',
+      desc: 'Envíos con número de guía para seguimiento en tiempo real a todo el territorio nacional.',
       highlight: false,
+      subtext: 'Tiempo estimado con transportadora',
     },
     {
       icon: Globe2,
       region: 'ENVÍOS INTERNACIONALES',
-      badge: 'COBERTURA GLOBAL',
-      time: '4 A 7 DÍAS HÁBILES',
-      desc: 'Despachos aéreos internacionales a cualquier destino del mundo con trazabilidad de principio a fin.',
+      badge: 'GLOBAL',
+      time: 'TIEMPO SEGÚN DESTINO',
+      desc: 'Envíos internacionales con seguimiento.',
+      subnote: 'Consulta el tiempo estimado para tu país por WhatsApp.',
       highlight: false,
+      subtext: 'Cobertura internacional con guía',
     },
   ];
+
+  const handleInternationalWhatsApp = () => {
+    const text = "Hola DE TO' SHOP, quiero consultar los tiempos y costos de envío para mi país.";
+    const url = siteConfig.getWhatsAppUrl(text);
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
 
   return (
     <section id="shipping" className="relative z-10 w-full py-14 sm:py-20 px-3.5 sm:px-6 lg:px-8 border-t border-white/5 bg-transparent">
@@ -38,7 +49,7 @@ export const ShippingSection: React.FC = () => {
           <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-3 sm:mb-4">
             <Clock className="w-3.5 h-3.5 text-emerald-400" />
             <span className="text-[10px] sm:text-[11px] font-mono tracking-widest uppercase text-zinc-300">
-              LOGÍSTICA & TIEMPOS DE ENTREGA
+              LOGÍSTICA & DESPACHOS
             </span>
           </div>
 
@@ -85,14 +96,30 @@ export const ShippingSection: React.FC = () => {
                   </h3>
 
                   {/* Big Delivery Time */}
-                  <div className="text-xl sm:text-2xl font-black font-sans text-white tracking-tight uppercase mb-3">
+                  <div className="text-xl sm:text-2xl font-black font-sans text-white tracking-tight uppercase mb-2">
                     {item.time}
                   </div>
 
                   {/* Description */}
-                  <p className="text-xs sm:text-sm text-zinc-400 font-sans font-light leading-relaxed">
+                  <p className="text-xs sm:text-sm text-zinc-400 font-sans font-light leading-relaxed mb-3">
                     {item.desc}
                   </p>
+
+                  {/* International subnote button */}
+                  {item.subnote && (
+                    <button
+                      onClick={handleInternationalWhatsApp}
+                      className="inline-flex items-center space-x-1.5 text-[10px] sm:text-[11px] font-mono text-emerald-400 hover:text-emerald-300 transition-colors underline underline-offset-4 decoration-emerald-500/40"
+                    >
+                      <MessageCircle className="w-3 h-3 shrink-0" />
+                      <span>{item.subnote}</span>
+                    </button>
+                  )}
+                </div>
+
+                {/* Subtext info */}
+                <div className="pt-3 mt-4 border-t border-white/5 text-[10px] sm:text-[11px] font-mono text-zinc-500">
+                  {item.subtext}
                 </div>
               </div>
             );
